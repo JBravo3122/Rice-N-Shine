@@ -1,0 +1,23 @@
+* {
+  color: #4f1212;
+}
+
+.faq-body {
+  display: flex;
+  flex-direction: column; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full page height */
+  text-align: center;
+}
+
+img {
+  height: 20px;
+}
