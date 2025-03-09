@@ -17,7 +17,7 @@ function FaQ() {
               <i>Serving answers with a side of rice</i>
             </p>
           </div>
-
+          <br />
           <div className="faq-question">
             <div className="faq-quesTitle">
               <h3>
@@ -31,9 +31,13 @@ function FaQ() {
               </p>
             </div>
           </div>
+          <br />
           <div className="faq-question">
             <div className="faq-quesTitle">
-              <h3>Are the ingredients easy to find?</h3>
+              <h3>
+                Are the ingredients easy to find?{" "}
+                <img src={downArrow} alt="Expand" />
+              </h3>
             </div>
             <div className="faq-answer">
               <p>
@@ -42,9 +46,13 @@ function FaQ() {
               </p>
             </div>
           </div>
+          <br />
           <div className="faq-question">
             <div className="faq-quesTitle">
-              <h3>Can I share recipes on social media?</h3>
+              <h3>
+                Can I share recipes on social media?{" "}
+                <img src={downArrow} alt="Expand" />
+              </h3>
             </div>
             <div className="faq-answer">
               <p>
