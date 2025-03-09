@@ -1,10 +1,12 @@
 import React from "react";
 import "./FaQ.css";
 import downArrow from "./assets/down-arrow.png";
+import Header from "./Header";
 
 function FaQ() {
   return (
     <>
+      <Header />
       <div className="faq-container">
         <div className="breadcrumbs">
           <p>Home &gt; Frequently Asked Questions</p>
