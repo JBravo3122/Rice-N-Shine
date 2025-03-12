@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FaQ.css";
 import downArrow from "./assets/down-arrow.png";
+import upArrow from "./assets/up-arrow.png";
 import Header from "./Header";
 
 function FaQ() {
+  const [openIndex, setOpenIndex] = useState(null); // what tracks which question was clicked
+
+  const toggleAnswer = (index) => {
+    setOpenIndex(openIndex === index ? null : index); // toggles the answer visibility
+  };
+
+  const faqData = [
+    {
+      question: "Are the recipes authentic?",
+      answer:
+        "Yes! We source our recipes from locals, home cooks, and food experts to ensure authenticity.",
+    },
+    {
+      question: "Are the ingredients easy to find?",
+      answer:
+        "Most ingredients are available in local markets or supermarkets, but we also provide alternatives if needed.",
+    },
+    {
+      question: "Can I share recipes on social media?",
+      answer:
+        "Absolutely! You can share recipes via social media buttons on each recipe page.",
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -20,49 +45,28 @@ function FaQ() {
             </p>
           </div>
           <br />
-          <div className="faq-question">
-            <div className="faq-quesTitle">
-              <h3>
-                Are the recipes authentic? <img src={downArrow} alt="Expand" />
-              </h3>
+
+          {faqData.map((item, index) => (
+            <div className="faq-question" key={index}>
+              <div
+                className="faq-quesTitle"
+                onClick={() => toggleAnswer(index)}
+              >
+                <div className="faq-quesContent">
+                  <h3>{item.question}</h3>
+                  <img
+                    src={openIndex === index ? upArrow : downArrow}
+                    alt="Toggle"
+                  />
+                </div>
+              </div>
+              {openIndex === index && (
+                <div className="faq-answer">
+                  <p>{item.answer}</p>
+                </div>
+              )}
             </div>
-            <div className="faq-answer">
-              <p>
-                Yes! We source our recipes from locals, home cooks, and food
-                experts to ensure authenticity.
-              </p>
-            </div>
-          </div>
-          <br />
-          <div className="faq-question">
-            <div className="faq-quesTitle">
-              <h3>
-                Are the ingredients easy to find?{" "}
-                <img src={downArrow} alt="Expand" />
-              </h3>
-            </div>
-            <div className="faq-answer">
-              <p>
-                Most ingredients are available in local markets or supermarkets,
-                but we also provide alternatives if needed.
-              </p>
-            </div>
-          </div>
-          <br />
-          <div className="faq-question">
-            <div className="faq-quesTitle">
-              <h3>
-                Can I share recipes on social media?{" "}
-                <img src={downArrow} alt="Expand" />
-              </h3>
-            </div>
-            <div className="faq-answer">
-              <p>
-                Absolutely! You can share recipes via social media buttons on
-                each recipe page.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </>
