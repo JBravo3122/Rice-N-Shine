@@ -15,17 +15,17 @@ function FaQ() {
     {
       question: "Are the recipes authentic?",
       answer:
-        "Yes! We source our recipes from locals, home cooks, and food experts to ensure authenticity.",
+        "Yes! Our recipes come directly from local chefs, home cooks, and culinary experts, ensuring they stay true to their origins.",
     },
     {
       question: "Are the ingredients easy to find?",
       answer:
-        "Most ingredients are available in local markets or supermarkets, but we also provide alternatives if needed.",
+        "Most ingredients are readily available in supermarkets or local markets. When certain items are less common, we provide suitable alternatives.",
     },
     {
       question: "Can I share recipes on social media?",
       answer:
-        "Absolutely! You can share recipes via social media buttons on each recipe page.",
+        "Absolutely! Each recipe page includes social sharing buttons, making it easy for you to share your favorite dishes with friends and family.",
     },
   ];
 
