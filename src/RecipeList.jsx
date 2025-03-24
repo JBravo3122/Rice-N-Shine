@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/RecipeList.css";
 
 function RecipeList() {
   return (
@@ -29,26 +30,64 @@ function RecipeList() {
           </div>
           <div className="reclist-sideBar">
             <h4>Regions</h4>
-            <ul>
-              <li>Region I</li>
-              <li>Region II</li>
-              <li>Region III</li>
-              <li>Region IV-A</li>
-              <li>Region IV-B</li>
-              <li>Region V</li>
-              <li>NCR</li>
-              <li>CAR</li>
-              <li>Region VI</li>
-              <li>Region VII</li>
-              <li>NIR</li>
-              <li>Region VII</li>
-              <li>Region IX</li>
-              <li>Region X</li>
-              <li>Region XI</li>
-              <li>Region XII</li>
-              <li>Region XIII</li>
-              <li>BARMM</li>
-            </ul>
+            <div className="reclist-regionlist">
+              <ul>
+                <li>
+                  <a href="">Region I</a>
+                </li>
+                <li>
+                  <a href="">Region II</a>
+                </li>
+                <li>
+                  <a href="">Region III</a>
+                </li>
+                <li>
+                  <a href="">Region IV-A</a>
+                </li>
+                <li>
+                  <a href="">Region IV-B</a>
+                </li>
+                <li>
+                  <a href="">Region V</a>
+                </li>
+                <li>
+                  <a href="">NCR</a>
+                </li>
+                <li>
+                  <a href="">CAR</a>
+                </li>
+                <li>
+                  <a href="">Region VI</a>
+                </li>
+                <li>
+                  <a href="">Region VII</a>
+                </li>
+                <li>
+                  <a href="">NIR</a>
+                </li>
+                <li>
+                  <a href="">Region VII</a>
+                </li>
+                <li>
+                  <a href="">Region IX</a>
+                </li>
+                <li>
+                  <a href="">Region X</a>
+                </li>
+                <li>
+                  <a href="">Region XI</a>
+                </li>
+                <li>
+                  <a href="">Region XII</a>
+                </li>
+                <li>
+                  <a href="">Region XIII</a>
+                </li>
+                <li>
+                  <a href="">BARMM</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="reclist-recipes">{/* grid here */}</div>
         </div>

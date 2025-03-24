@@ -1,0 +1,113 @@
+.reclist-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500vh;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  border: 1px solid green;
+}
+
+.reclist-title {
+  text-align: center;
+  line-height: 0.1;
+  margin-bottom: 30px;
+}
+
+.reclist-title h1 {
+  font-size: 50px;
+}
+
+.reclist-title i {
+  font-size: 20px;
+}
+
+.reclist-title hr {
+  border: 1px solid #4f1212;
+  width: 1000px;
+}
+
+/* Buttons */
+
+.reclist-tabButtons {
+  width: 100%;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.reclist-searchBar input {
+  width: 250px;
+  height: 40px;
+  background-color: #ffe5c7;
+  border: 2px solid #4f1212;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-weight: 550;
+}
+
+.reclist-allButtons {
+  display: flex;
+  gap: 30px;
+}
+
+.reclist-allButtons button {
+  background-color: #bb1f1f;
+  border-radius: 100px;
+  border: 0;
+  color: white;
+  width: 210px;
+  height: 40px;
+  font-size: 24px;
+}
+
+/* Side Bar */
+
+.reclist-sideBar {
+  width: 200px;
+  margin-left: 50px;
+  /*border: 1px solid red;*/
+}
+
+.reclist-sideBar h4 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.reclist-regionlist {
+  width: 150px;
+  display: flex;
+  float: right;
+  margin: 0 auto;
+  margin-top: -20px;
+  padding: 0;
+}
+
+.reclist-regionlist ul {
+  font-size: 20px;
+  padding: 0;
+  /*border: 1px solid purple;*/
+}
+
+.reclist-regionlist li {
+  color: black;
+  list-style-type: square;
+  cursor: pointer;
+}
+
+.reclist-regionlist ul li::marker {
+  color: grey;
+  font-size: 1.5em;
+}
+
+.reclist-regionlist a {
+  text-decoration: none;
+}
+
+.reclist-regionlist a:hover {
+  text-decoration: underline;
+}

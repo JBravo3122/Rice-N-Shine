@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/faq" element={<FaQ />} />
-        <Route path="/" element={<RecipeList />} />
+        <Route path="/recipelist" element={<RecipeList />} />
       </Routes>
     </BrowserRouter>
   );
