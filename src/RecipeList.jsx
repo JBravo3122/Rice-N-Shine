@@ -1,24 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./css/RecipeList.css";
-import { supabase } from "./supabaseclient.js";
+import { supabase, supabaseAnonKey, supabaseUrl } from "./supabaseclient.js";
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([]); // where we store the recipes
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const { data, error } = await supabase
-        .from("recipes")
-        .select(
-          `
-          recipe_id, 
-          recipe_name, 
-          pictures(path), 
-          regions(region_id, island_group(group_id))
-        `
-        )
-        .order("recipe_id", { ascending: true }); // fetches all recipes
-
+      const { data, error } = await supabase.from("recipes").select("*"); // fetches all recipes
       if (error) {
         console.error("error fetching recipes: ", error);
       } else {
@@ -32,8 +21,8 @@ function RecipeList() {
       }
     };
 
-    console.log("Supabase URL:", supabase?.url);
-    console.log("Supabase Key:", supabase?.key);
+    console.log("Supabase URL:", supabaseUrl);
+    console.log("Supabase Key:", supabaseAnonKey);
 
     fetchRecipes();
   }, []);
