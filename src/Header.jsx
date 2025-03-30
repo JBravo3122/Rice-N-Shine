@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./css/Header.css";
 import ricelogo from "./assets/ricelogowtext.png";
 import suman from "./assets/suman.png";
 
 function Header() {
   const [activeNav, setActiveNav] = useState(""); // Track active link
+  const navigate = useNavigate();
 
   const handleNavClick = (navItem) => {
     setActiveNav(navItem);
+    navigate(path);
   };
 
   return (
@@ -31,16 +34,22 @@ function Header() {
         <table>
           <tbody>
             <tr>
-              {["Home", "About", "Recipes", "FAQs", "Site Map"].map((item) => (
-                <td key={item}>
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Recipes", path: "/recipelist" },
+                { name: "FAQs", path: "/faq" },
+                { name: "Site Map", path: "/sitemap" },
+              ].map((item) => (
+                <td key={item.name}>
                   <p>
-                    <a
-                      href="#"
-                      className={activeNav === item ? "active" : ""}
+                    <Link
+                      to={item.path}
+                      className={activeNav === item.name ? "active" : ""}
                       onClick={() => handleNavClick(item)}
                     >
-                      {item}
-                    </a>
+                      {item.name}
+                    </Link>
                   </p>
                 </td>
               ))}

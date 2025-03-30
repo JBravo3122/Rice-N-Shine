@@ -1,14 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./css/RecipeList.css";
-
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  "https://zygtgtswjxdnaewbjdte.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5Z3RndHN3anhkbmFld2JqZHRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI3MzE1NjcsImV4cCI6MjA1ODMwNzU2N30.ekJHNExltV8DoHIeWestXbx1YN-O4-66-uBTH329AaM"
-);
+import { supabase } from "./supabaseclient.js";
 
 function RecipeList() {
+  const [recipes, setRecipes] = useState([]); // where we store the recipes
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      const { data, error } = await supabase
+        .from("recipes")
+        .select(
+          `
+          recipe_id, 
+          recipe_name, 
+          pictures(path), 
+          regions(region_id, island_group(group_id))
+        `
+        )
+        .order("recipe_id", { ascending: true }); // fetches all recipes
+
+      if (error) {
+        console.error("error fetching recipes: ", error);
+      } else {
+        const uniqueRecipes = data.map((recipe) => ({
+          ...recipe,
+          picture_path: recipe.pictures?.length
+            ? recipe.pictures[0].path
+            : "/default-image.jpg",
+        }));
+        setRecipes(uniqueRecipes);
+      }
+    };
+
+    console.log("Supabase URL:", supabase?.url);
+    console.log("Supabase Key:", supabase?.key);
+
+    fetchRecipes();
+  }, []);
+
   return (
     <>
       <div className="reclist-container">
@@ -96,7 +125,18 @@ function RecipeList() {
               </ul>
             </div>
           </div>
-          <div className="reclist-recipes">{/* grid here */}</div>
+          <div className="reclist-recipes">
+            {recipes.length > 0 ? (
+              recipes.map((recipe) => (
+                <div key={recipe.recipe_id} className="recipe-card">
+                  <img src={recipe.picture_path} alt={recipe.recipe_name} />
+                  <h3>{recipe.recipe_name}</h3>
+                </div>
+              ))
+            ) : (
+              <p>Loading recipes...</p>
+            )}
+          </div>
         </div>
       </div>
     </>

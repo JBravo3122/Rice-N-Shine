@@ -8,14 +8,15 @@ import Homepage from "./Homepage.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <Routes>
+        <Route path="/" element={<h1>Home</h1>} />
         <Route path="/faq" element={<FaQ />} />
         <Route path="/recipelist" element={<RecipeList />} />
         <Route path="/homepage" element={<Homepage />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 
