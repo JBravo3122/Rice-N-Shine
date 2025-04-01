@@ -19,7 +19,7 @@ function Header() {
         <div className="headerlogocontainer">
           <img className="sumanleft" src={suman} alt="Suman" />
           <img className="sumanright" src={suman} alt="Suman" />
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <Link to="/">
             <span className="logocenter">
               <img
                 className="headerlogo"
@@ -27,7 +27,7 @@ function Header() {
                 alt="Rice N' Shine Logo(Clickable)"
               />
             </span>
-          </a>
+          </Link>
         </div>
       </header>
       <div className="headernav">

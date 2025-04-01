@@ -7,7 +7,14 @@ function RecipeList() {
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const { data, error } = await supabase.from("recipes").select("*"); // fetches all recipes
+      const { data, error } = await supabase.from("recipes").select(`
+        recipe_id, 
+        recipe_name, 
+        pictures!recipe_id(path), 
+        regions!region_id(region_name, island_group!group_id(group_name))
+      `); // fetches all recipes
+      console.log("Data:", data);
+      console.log("Error:", error);
       if (error) {
         console.error("error fetching recipes: ", error);
       } else {
@@ -16,6 +23,7 @@ function RecipeList() {
           picture_path: recipe.pictures?.length
             ? recipe.pictures[0].path
             : "/default-image.jpg",
+          region_name: recipe.regions?.region_name || "Unknown Region",
         }));
         setRecipes(uniqueRecipes);
       }
@@ -53,78 +61,81 @@ function RecipeList() {
               <button type="button">Mindanao</button>
             </div>
           </div>
-          <div className="reclist-sideBar">
-            <h4>Regions</h4>
-            <div className="reclist-regionlist">
-              <ul>
-                <li>
-                  <a href="">Region I</a>
-                </li>
-                <li>
-                  <a href="">Region II</a>
-                </li>
-                <li>
-                  <a href="">Region III</a>
-                </li>
-                <li>
-                  <a href="">Region IV-A</a>
-                </li>
-                <li>
-                  <a href="">Region IV-B</a>
-                </li>
-                <li>
-                  <a href="">Region V</a>
-                </li>
-                <li>
-                  <a href="">NCR</a>
-                </li>
-                <li>
-                  <a href="">CAR</a>
-                </li>
-                <li>
-                  <a href="">Region VI</a>
-                </li>
-                <li>
-                  <a href="">Region VII</a>
-                </li>
-                <li>
-                  <a href="">NIR</a>
-                </li>
-                <li>
-                  <a href="">Region VII</a>
-                </li>
-                <li>
-                  <a href="">Region IX</a>
-                </li>
-                <li>
-                  <a href="">Region X</a>
-                </li>
-                <li>
-                  <a href="">Region XI</a>
-                </li>
-                <li>
-                  <a href="">Region XII</a>
-                </li>
-                <li>
-                  <a href="">Region XIII</a>
-                </li>
-                <li>
-                  <a href="">BARMM</a>
-                </li>
-              </ul>
+          <div className="allRecipes-container">
+            <div className="reclist-sideBar">
+              <h4>Regions</h4>
+              <div className="reclist-regionlist">
+                <ul>
+                  <li>
+                    <a href="">Region I</a>
+                  </li>
+                  <li>
+                    <a href="">Region II</a>
+                  </li>
+                  <li>
+                    <a href="">Region III</a>
+                  </li>
+                  <li>
+                    <a href="">Region IV-A</a>
+                  </li>
+                  <li>
+                    <a href="">Region IV-B</a>
+                  </li>
+                  <li>
+                    <a href="">Region V</a>
+                  </li>
+                  <li>
+                    <a href="">NCR</a>
+                  </li>
+                  <li>
+                    <a href="">CAR</a>
+                  </li>
+                  <li>
+                    <a href="">Region VI</a>
+                  </li>
+                  <li>
+                    <a href="">Region VII</a>
+                  </li>
+                  <li>
+                    <a href="">NIR</a>
+                  </li>
+                  <li>
+                    <a href="">Region VII</a>
+                  </li>
+                  <li>
+                    <a href="">Region IX</a>
+                  </li>
+                  <li>
+                    <a href="">Region X</a>
+                  </li>
+                  <li>
+                    <a href="">Region XI</a>
+                  </li>
+                  <li>
+                    <a href="">Region XII</a>
+                  </li>
+                  <li>
+                    <a href="">Region XIII</a>
+                  </li>
+                  <li>
+                    <a href="">BARMM</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="reclist-recipes">
-            {recipes.length > 0 ? (
-              recipes.map((recipe) => (
-                <div key={recipe.recipe_id} className="recipe-card">
-                  <img src={recipe.picture_path} alt={recipe.recipe_name} />
-                  <h3>{recipe.recipe_name}</h3>
-                </div>
-              ))
-            ) : (
-              <p>Loading recipes...</p>
-            )}
+            <div className="reclist-recipes">
+              {recipes.length > 0 ? (
+                recipes.map((recipe) => (
+                  <div key={recipe.recipe_id} className="recipe-card">
+                    <img src={recipe.picture_path} alt={recipe.recipe_name} />
+                    <h3>{recipe.recipe_name}</h3>
+                    <p>{recipe.region_name}</p>
+                  </div>
+                ))
+              ) : (
+                <p>Loading recipes...</p>
+              )}
+            </div>
           </div>
         </div>
       </div>
