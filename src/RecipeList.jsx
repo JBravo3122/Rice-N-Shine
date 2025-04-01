@@ -7,12 +7,17 @@ function RecipeList() {
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const { data, error } = await supabase.from("recipes").select(`
+      const { data, error } = await supabase
+        .from("recipes")
+        .select(
+          `
         recipe_id, 
         recipe_name, 
         pictures!recipe_id(path), 
         regions!region_id(region_name, island_group!group_id(group_name))
-      `); // fetches all recipes
+      `
+        )
+        .order("region_id", { ascending: true }); // fetches all recipes
       console.log("Data:", data);
       console.log("Error:", error);
       if (error) {
@@ -39,7 +44,7 @@ function RecipeList() {
     <>
       <div className="reclist-container">
         <div className="breadcrumbs">
-          <p>Home &gt; Frequently Asked Questions</p>
+          <p>Home &gt; Recipes</p>
         </div>
         <div className="reclist-body">
           <div className="reclist-title">
