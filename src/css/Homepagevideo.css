@@ -1,0 +1,30 @@
+.breadcrumbicon {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.video-title {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #5e2a1f;
+    margin: 10px 20px;
+}
+
+.video-container {
+    width: 90%;
+    max-width: 1500px;
+    height: 700px;
+    background: #d3d3d3;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videopage {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: left;
+    height: 900px;
+  }
