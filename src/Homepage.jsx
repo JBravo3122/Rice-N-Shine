@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./css/Homepage.css";
 
 function Homepage() {
+  const navigate = useNavigate();
+
   return (
     <>
     <div className="homepage-featured-recipes">
@@ -33,7 +36,9 @@ function Homepage() {
       </div>
       <div className="homepage-videocontent">
         <h3>Check Out <br />Our Video</h3>
-        <button className="homepage-watch-video">Watch Video</button>
+        <button className="homepage-watch-video" onClick={() => navigate("/homepage-video")}>
+          Watch Video
+        </button>
       </div>
     </div>
 
