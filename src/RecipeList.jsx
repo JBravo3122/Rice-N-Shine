@@ -129,17 +129,20 @@ function RecipeList() {
               </div>
             </div>
             <div className="reclist-recipes">
-              {recipes.length > 0 ? (
-                recipes.map((recipe) => (
-                  <div key={recipe.recipe_id} className="recipe-card">
-                    <img src={recipe.picture_path} alt={recipe.recipe_name} />
-                    <h3>{recipe.recipe_name}</h3>
-                    <p>{recipe.region_name}</p>
-                  </div>
-                ))
-              ) : (
-                <p>Loading recipes...</p>
-              )}
+              {recipes.length > 0
+                ? recipes.map((recipe) => (
+                    <div key={recipe.recipe_id} className="recipe-card">
+                      <img src={recipe.picture_path} alt={recipe.recipe_name} />
+                      <h3>{recipe.recipe_name}</h3>
+                      <p>{recipe.region_name}</p>
+                    </div>
+                  ))
+                : Array.from({ length: 3 }).map((_, index) => (
+                    <div className="recipe-skelCard">
+                      <img></img>
+                      <h3></h3>
+                    </div>
+                  ))}
             </div>
           </div>
         </div>
