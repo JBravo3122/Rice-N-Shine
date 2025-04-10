@@ -4,10 +4,17 @@ import { supabase, supabaseAnonKey, supabaseUrl } from "./supabaseclient.js";
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([]); // where we store the recipes
+  const [selectedGroup, setSelectedGroup] = useState(null);
+  const [selectedRegion, setSelectedRegion] = useState(null);
+  const groupToRegionIds = {
+    1: [1, 2, 3, 4, 5, 6, 7, 8],
+    2: [9, 10, 11],
+    3: [12, 13, 14, 15, 16, 17, 18],
+  };
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const { data, error } = await supabase
+      let query = supabase
         .from("recipes")
         .select(
           `
@@ -18,8 +25,18 @@ function RecipeList() {
       `
         )
         .order("region_id", { ascending: true }); // fetches all recipes
-      console.log("Data:", data);
-      console.log("Error:", error);
+
+      if (selectedRegion) {
+        query = query.eq("region_id", selectedRegion);
+      } else if (selectedGroup !== null) {
+        const regionIds = groupToRegionIds[selectedGroup];
+        if (regionIds) {
+          query = query.in("region_id", regionIds);
+        }
+      }
+
+      const { data, error } = await query;
+
       if (error) {
         console.error("error fetching recipes: ", error);
       } else {
@@ -34,11 +51,8 @@ function RecipeList() {
       }
     };
 
-    console.log("Supabase URL:", supabaseUrl);
-    console.log("Supabase Key:", supabaseAnonKey);
-
     fetchRecipes();
-  }, []);
+  }, [selectedGroup, selectedRegion]);
 
   return (
     <>
@@ -60,10 +74,42 @@ function RecipeList() {
               <input type="text" placeholder="Search Recipe"></input>
             </div>
             <div className="reclist-allButtons">
-              <button type="button">All</button>
-              <button type="button">Luzon</button>
-              <button type="button">Visayas</button>
-              <button type="button">Mindanao</button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedRegion(null);
+                  setSelectedGroup(null);
+                }}
+              >
+                All
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedRegion(null);
+                  setSelectedGroup(1);
+                }}
+              >
+                Luzon
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedRegion(null);
+                  setSelectedGroup(2);
+                }}
+              >
+                Visayas
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedRegion(null);
+                  setSelectedGroup(3);
+                }}
+              >
+                Mindanao
+              </button>
             </div>
           </div>
           <div className="allRecipes-container">
@@ -72,58 +118,202 @@ function RecipeList() {
               <div className="reclist-regionlist">
                 <ul>
                   <li>
-                    <a href="">Region I</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(1);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region I
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region II</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(2);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region II
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region III</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(3);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region III
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region IV-A</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(4);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region IV-A
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region IV-B</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(5);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region IV-B
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region V</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(6);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region V
+                    </a>
                   </li>
                   <li>
-                    <a href="">NCR</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(7);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      NCR
+                    </a>
                   </li>
                   <li>
-                    <a href="">CAR</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(8);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      CAR
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region VI</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(9);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region VI
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region VII</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(10);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region VII
+                    </a>
                   </li>
                   <li>
-                    <a href="">NIR</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(11);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      NIR
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region VII</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(12);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region VII
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region IX</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(13);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region IX
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region X</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(14);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region X
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region XI</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(15);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region XI
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region XII</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(16);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region XII
+                    </a>
                   </li>
                   <li>
-                    <a href="">Region XIII</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(17);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      Region XIII
+                    </a>
                   </li>
                   <li>
-                    <a href="">BARMM</a>
+                    <a
+                      href="#"
+                      onClick={() => {
+                        setSelectedRegion(18);
+                        setSelectedGroup("All");
+                      }}
+                    >
+                      BARMM
+                    </a>
                   </li>
                 </ul>
               </div>
