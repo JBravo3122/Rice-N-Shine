@@ -7,6 +7,7 @@ import RecipeList from "./RecipeList.jsx";
 import Homepage from "./Homepage.jsx";
 import Video from "./Homepagevideo.jsx";
 import About from "./AboutUs.jsx";
+import Footer from "./Footer.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/homepage-video" element={<Video />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -1,94 +1,93 @@
-.footer{
-    background-color: #7D1D1B;
-    height: 90px;
-    width: 100vw;
-    overflow: hidden;
-    object-fit: contain;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.footer {
+  background-color: #7d1d1b;
+  height: 90px;
+  width: 100vw;
+  overflow: hidden;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.footerlogo{
-    height: 143px;
-    object-fit: contain;
-    position: relative;
-    scale: 0.45;
-    align-self: center;
-    margin-left: -10px;
-    margin-top:9px;
+.footerlogo {
+  height: 143px;
+  object-fit: contain;
+  position: relative;
+  scale: 0.45;
+  align-self: center;
+  margin-left: -10px;
+  margin-top: 9px;
 }
 
-.footerlogocontainer{
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
+.footerlogocontainer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
 }
 
-.sampleft, .sampright {
-    height: 125px;
-    object-fit: cover;
-    position: relative;
-    align-self: center;
-    margin-top: 0;
-    scale: 1.15;
-    width: 125px;
+.sampleft,
+.sampright {
+  height: 125px;
+  object-fit: cover;
+  position: relative;
+  align-self: center;
+  margin-top: 0;
+  scale: 1.15;
+  width: 125px;
 }
 
 .sampleft {
-    position: absolute;
-    left: -25px;
+  position: absolute;
+  left: -25px;
 }
 
 .sampright {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
 
-.footerlogocontainer td{
-    padding-left: 65px; 
+.footerlogocontainer td {
+  padding-left: 65px;
 }
 
-.footerlogocontainer a{
-    text-decoration: none;
-    color: #ffe0bd;
-    font-weight: 400;
-    font-size: 15px;
+.footerlogocontainer a {
+  text-decoration: none;
+  color: #ffe0bd;
+  font-weight: 400;
+  font-size: 15px;
 }
 
-.footerlogocontainer table{
-    padding-left: 395px;
-    position: relative;
+.footerlogocontainer table {
+  padding-left: 395px;
+  position: relative;
 }
 
-.footerlogocontainer button{
-    width: 145px;
-    height: 45px;
-    background-color: #541212;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    align-self: center;
-    margin-right: 150px;
-    margin-top: 7px;
+.footerlogocontainer button {
+  width: 145px;
+  height: 45px;
+  background-color: #541212;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: center;
+  margin-right: 150px;
+  margin-top: 7px;
 }
 
-.footerlogocontainer button p{
-    text-align: center;
-    font-weight: 400;
-    font-size: 13px;
-    color: #ffe0bd;
+.footerlogocontainer button p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 13px;
+  color: #ffe0bd;
 }
 
-.footerlogocontainer button img{
-    scale: 0.75;
-    margin-left: 5px;
+.footerlogocontainer button img {
+  scale: 0.75;
+  margin-left: 5px;
 }
-
-
