@@ -1,10 +1,11 @@
 .reclist-container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500vh;
+  height: auto;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1500vh;
   margin: 0 auto;
   /*border: 1px solid green;*/
 }
@@ -73,6 +74,7 @@
 
 .allRecipes-container {
   display: flex;
+  align-items: flex-start;
 }
 
 /* Side Bar */
@@ -131,7 +133,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns*/
   row-gap: 35px;
-  height: 100vh;
+  column-gap: 30px;
+  padding-bottom: 50px;
 }
 
 .recipe-card {
@@ -139,7 +142,7 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 310px;
-  height: 250px;
+  height: auto;
   background-color: white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -166,6 +169,9 @@
   color: black;
   margin: 5px;
   margin-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .recipe-card p {
@@ -173,6 +179,9 @@
   margin: 5px;
   margin-top: 0;
   margin-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Loading skeleton */
