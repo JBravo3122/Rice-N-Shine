@@ -132,7 +132,7 @@
   flex-grow: 1; /*this is what makes it take the whole space */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns*/
-  row-gap: 35px;
+  row-gap: 40px;
   column-gap: 30px;
   padding-bottom: 50px;
 }
