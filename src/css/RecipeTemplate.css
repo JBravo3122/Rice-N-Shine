@@ -1,0 +1,35 @@
+.recipetemplatecontainer {
+    padding: clamp(20px, 5vw, 10px) clamp(20px, 5vw, 75px);
+}
+
+.recipetempcontainercontainer {
+    width: 100%;
+    height: auto;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.recipetemplatecontainer h1 {
+    font-size: clamp(24px, 3vw, 35px);
+    padding-bottom: 10px;
+}
+
+.recipetempsubtopictitle {
+    padding: clamp(8px, 2vw, 12px) 0;
+}
+
+.recipetempdesc {
+    font-size: clamp(16px, 2vw, 20px);
+    padding: clamp(8px, 2vw, 12px) 0;
+}
+
+.recipetempimage {
+    width: 100%;
+    object-fit: cover;
+    height: clamp(200px, 40vw, 575px);
+    border-radius: 8px;
+}
+
+.recipetemplist {
+    padding: 0 clamp(20px, 5vw, 100px) 0 clamp(15px, 3vw, 50px);
+    font-size: clamp(16px, 2vw, 20px);
+}
