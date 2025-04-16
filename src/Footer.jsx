@@ -30,43 +30,45 @@ function Footer() {
             />
           </a>
           <table className="footer-links">
-            <tr>
-              <td>
-                <h2>
-                  <Link to="/" onClick={scrollToTop}>
-                    Home
-                  </Link>
-                </h2>
-              </td>
-              <td>
-                <h2>
-                  <Link to="/about" onClick={scrollToTop}>
-                    About
-                  </Link>
-                </h2>
-              </td>
-              <td>
-                <h2>
-                  <Link to="/recipelist" onClick={scrollToTop}>
-                    Recipes
-                  </Link>
-                </h2>
-              </td>
-              <td>
-                <h2>
-                  <Link to="/faq" onClick={scrollToTop}>
-                    FAQs
-                  </Link>
-                </h2>
-              </td>
-              <td>
-                <h2>
-                  <Link to="/" onClick={scrollToTop}>
-                    Site Map
-                  </Link>
-                </h2>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <h2>
+                    <Link to="/" onClick={scrollToTop}>
+                      Home
+                    </Link>
+                  </h2>
+                </td>
+                <td>
+                  <h2>
+                    <Link to="/about" onClick={scrollToTop}>
+                      About
+                    </Link>
+                  </h2>
+                </td>
+                <td>
+                  <h2>
+                    <Link to="/recipelist" onClick={scrollToTop}>
+                      Recipes
+                    </Link>
+                  </h2>
+                </td>
+                <td>
+                  <h2>
+                    <Link to="/faq" onClick={scrollToTop}>
+                      FAQs
+                    </Link>
+                  </h2>
+                </td>
+                <td>
+                  <h2>
+                    <Link to="/" onClick={scrollToTop}>
+                      Site Map
+                    </Link>
+                  </h2>
+                </td>
+              </tr>
+            </tbody>
           </table>
           <button onClick={scrollToTop} className="scrollToTopBtn">
             <p>Scroll to Top</p>

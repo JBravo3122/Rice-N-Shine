@@ -189,7 +189,7 @@
 .recipe-skelCard {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 310px;
   height: 250px;
   background-color: white;
@@ -197,9 +197,11 @@
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
+  padding: 0;
 }
 
 .recipe-skelCard img {
+  display: block;
   margin: 0;
   padding: 0;
   background-color: lightgrey;

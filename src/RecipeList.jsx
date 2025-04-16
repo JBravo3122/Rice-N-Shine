@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./css/RecipeList.css";
-import { supabase, supabaseAnonKey, supabaseUrl } from "./supabaseclient.js";
+import { Link } from "react-router-dom";
+import { supabase } from "./supabaseclient.js";
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([]); // where we store the recipes
@@ -20,7 +21,7 @@ function RecipeList() {
           `
         recipe_id, 
         recipe_name, 
-        pictures!recipe_id(path), 
+        pictures(path), 
         regions!region_id(region_name, island_group!group_id(group_name))
       `
         )
@@ -322,13 +323,18 @@ function RecipeList() {
               {recipes.length > 0
                 ? recipes.map((recipe) => (
                     <div key={recipe.recipe_id} className="recipe-card">
-                      <img src={recipe.picture_path} alt={recipe.recipe_name} />
-                      <h3>{recipe.recipe_name}</h3>
-                      <p>{recipe.region_name}</p>
+                      <Link to={`/recipepage/${recipe.recipe_id}`}>
+                        <img
+                          src={recipe.picture_path}
+                          alt={recipe.recipe_name}
+                        />
+                        <h3>{recipe.recipe_name}</h3>
+                        <p>{recipe.region_name}</p>
+                      </Link>
                     </div>
                   ))
-                : Array.from({ length: 3 }).map((_, index) => (
-                    <div className="recipe-skelCard">
+                : Array.from({ length: 6 }).map((_, index) => (
+                    <div key={index} className="recipe-skelCard">
                       <img></img>
                       <h3></h3>
                     </div>

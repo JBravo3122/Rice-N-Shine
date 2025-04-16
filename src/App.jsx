@@ -4,6 +4,7 @@ import "./css/App.css";
 import Header from "./Header.jsx";
 import FaQ from "./FaQ.jsx";
 import RecipeList from "./RecipeList.jsx";
+import RecipeTemplate from "./RecipeTemplate.jsx";
 import Homepage from "./Homepage.jsx";
 import Video from "./Homepagevideo.jsx";
 import About from "./AboutUs.jsx";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/recipelist" element={<RecipeList />} />
         <Route path="/homepage-video" element={<Video />} />
         <Route path="/about" element={<About />} />
+        <Route path="/recipepage/:recipe_id" element={<RecipeTemplate />} />
       </Routes>
       <Footer />
     </>
