@@ -1,30 +1,46 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./css/SiteMap.css";
-import sitemap from "./assets/SiteMapTitle.png";
+/*import sitemap from "./assets/SiteMapTitle.png";*/
 
 function SiteMap() {
   return (
     <>
-    <div className="sitemapbreadcrumbcontainer">
-      <div className="breadcrumbicon">
+      <div className="sitemapbreadcrumbcontainer">
+        <div className="breadcrumbicon">
           <p>🏠 Home &gt;</p>
+        </div>
       </div>
-    </div>
-    <div className="sitemapcontainer">
-        <img className="sitemaptitle" src={sitemap} alt="Site Map" />
+      <div className="sitemapcontainer">
+        {/*<img className="sitemaptitle" src={sitemap} alt="Site Map" />*/}
         <ul>
-            <li> <a href="">Home</a>  </li>
-              <ul className="subtopictitle">
-                  <li > <a href="">Video</a>  </li>
-              </ul>
-            <li> <a href="">About</a> </li>
-            <li> <a href="">Recipes</a> </li>
-            <li> <a href="">FAQs </a></li>
-            <li> <a href="">Site Map</a> </li>
+          <li>
+            {" "}
+            <Link to="/">Home</Link>{" "}
+          </li>
+          <ul className="subtopictitle">
+            <li>
+              {" "}
+              <Link to="/homepage-video">Video</Link>{" "}
+            </li>
+          </ul>
+          <li>
+            {" "}
+            <Link to="/about">About</Link>{" "}
+          </li>
+          <li>
+            {" "}
+            <Link to="/recipelist">Recipes</Link>{" "}
+          </li>
+          <li>
+            {" "}
+            <Link to="/faq">FAQs </Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/sitemap">Site Map</Link>{" "}
+          </li>
         </ul>
-    </div>
-      
-      
+      </div>
     </>
   );
 }

@@ -8,6 +8,7 @@ import RecipeTemplate from "./RecipeTemplate.jsx";
 import Homepage from "./Homepage.jsx";
 import Video from "./Homepagevideo.jsx";
 import About from "./AboutUs.jsx";
+import SiteMap from "./SiteMap.jsx";
 import Footer from "./Footer.jsx";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/homepage-video" element={<Video />} />
         <Route path="/about" element={<About />} />
         <Route path="/recipepage/:recipe_id" element={<RecipeTemplate />} />
+        <Route path="/sitemap" element={<SiteMap />} />
       </Routes>
       <Footer />
     </>
