@@ -14,30 +14,24 @@ function SiteMap() {
         {/*<img className="sitemaptitle" src={sitemap} alt="Site Map" />*/}
         <ul>
           <li>
-            {" "}
-            <Link to="/">Home</Link>{" "}
+            <Link to="/">Home</Link>
           </li>
           <ul className="subtopictitle">
             <li>
-              {" "}
-              <Link to="/homepage-video">Video</Link>{" "}
+              <Link to="/homepage-video">Video</Link>
             </li>
           </ul>
           <li>
-            {" "}
-            <Link to="/about">About</Link>{" "}
+            <Link to="/about">About</Link>
           </li>
           <li>
-            {" "}
-            <Link to="/recipelist">Recipes</Link>{" "}
+            <Link to="/recipelist">Recipes</Link>
           </li>
           <li>
-            {" "}
             <Link to="/faq">FAQs </Link>
           </li>
           <li>
-            {" "}
-            <Link to="/sitemap">Site Map</Link>{" "}
+            <Link to="/sitemap">Site Map</Link>
           </li>
         </ul>
       </div>
