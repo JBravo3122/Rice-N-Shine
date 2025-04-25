@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./css/SiteMap.css";
-/*import sitemap from "./assets/SiteMapTitle.png";*/
+import sitemap from "./assets/SiteMapTitle.png";
 
 function SiteMap() {
   return (
@@ -11,7 +11,7 @@ function SiteMap() {
         </div>
       </div>
       <div className="sitemapcontainer">
-        {/*<img className="sitemaptitle" src={sitemap} alt="Site Map" />*/}
+        <img className="sitemaptitle" src={sitemap} alt="Site Map" />
         <ul>
           <li>
             <Link to="/">Home</Link>

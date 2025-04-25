@@ -62,7 +62,7 @@ function Footer() {
                 </td>
                 <td>
                   <h2>
-                    <Link to="/" onClick={scrollToTop}>
+                    <Link to="/sitemap" onClick={scrollToTop}>
                       Site Map
                     </Link>
                   </h2>
