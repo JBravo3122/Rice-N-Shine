@@ -36,13 +36,12 @@
   font-size: clamp(16px, 2vw, 20px);
   margin: 0;
   padding: 0;
-  width: 70vw;
+  width: 65vw;
 }
 
 .recipetemp-amount {
-  /* color: #817171;*/
+  color: #817171;
   font-weight: 400;
-  text-align: right;
 }
 
 /*
@@ -55,11 +54,13 @@
 
 .recipetemplist table {
   table-layout: auto;
-  width: 100%;
+  width: auto;
+  border-collapse: collapse;
 }
 
-.recipetemp-ingredientlist tr {
-  padding: 0 0 10px 0;
+.recipetemp-ingredientlist td {
+  padding: 5px 0 5px 0;
+  border-bottom: 3px solid #ffc787;
 }
 
 .recipetemp-ingredientlist td:first-child {

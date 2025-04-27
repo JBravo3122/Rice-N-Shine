@@ -84,10 +84,11 @@ function RecipeTemplate() {
                 {recipe.ingredients.map((ingredient, index) => (
                   <tr key={index} className="recipetemp-ingredientlist">
                     <td>
-                      {/*<span className="recipetemp-amount">*/}
-                      {ingredient.amount}
+                      <span className="recipetemp-amount">
+                        {ingredient.amount}
+                      </span>
                     </td>
-                    {/*</span>*/}
+
                     <td>{ingredient.ingredients_name}</td>
                   </tr>
                 ))}
