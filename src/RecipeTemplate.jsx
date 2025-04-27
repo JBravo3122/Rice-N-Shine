@@ -77,6 +77,9 @@ function RecipeTemplate() {
             alt={recipe.recipe_name}
           />
 
+          <br />
+          <br />
+
           <h2 className="recipetempsubtopictitle"> Ingredients </h2>
           <div className="recipetemplist">
             <table>
@@ -131,6 +134,8 @@ function RecipeTemplate() {
               </tbody>
             </table>
           </div>
+          <br />
+          <br />
 
           <h2 className="recipetempsubtopictitle"> Preparation </h2>
           <div className="recipetemplist">

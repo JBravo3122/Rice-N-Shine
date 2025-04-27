@@ -1,3 +1,11 @@
+.reclist-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 20px;
+}
+
 .reclist-container {
   display: flex;
   flex-direction: column;
@@ -12,7 +20,8 @@
 
 .reclist-title {
   text-align: center;
-  line-height: 0.1;
+  line-height: 1;
+  height: 10vh;
   margin-bottom: 30px;
 }
 

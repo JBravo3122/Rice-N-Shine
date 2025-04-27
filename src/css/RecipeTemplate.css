@@ -1,5 +1,5 @@
 .recipetemplatecontainer {
-  padding: clamp(20px, 5vw, 10px) clamp(20px, 5vw, 75px);
+  padding: clamp(20px, 8vw, 10px) clamp(20px, 10vw, 150px);
 }
 
 .recipetempcontainercontainer {

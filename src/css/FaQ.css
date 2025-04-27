@@ -20,7 +20,8 @@
 
 .faq-title {
   text-align: center;
-  line-height: 0.1;
+  line-height: 1;
+  height: 10vh;
   margin-bottom: 30px;
 }
 
@@ -30,11 +31,13 @@
 
 .faq-title i {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .faq-title hr {
   border: 1px solid #4f1212;
   width: 1000px;
+  margin: 3px 0;
 }
 
 .faq-question {
