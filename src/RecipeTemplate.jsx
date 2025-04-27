@@ -7,6 +7,7 @@ function RecipeTemplate() {
   const [recipe, setRecipe] = useState(null);
   const { recipe_id } = useParams();
   const parsedRecipeId = parseInt(recipe_id, 10);
+  const [currentStep, setCurrentStep] = useState(0);
 
   console.log("first recipe id: ", parsedRecipeId);
   if (isNaN(parsedRecipeId)) {
@@ -38,9 +39,26 @@ function RecipeTemplate() {
     fetchRecipe();
   }, [recipe_id]);
 
+  const goToNextStep = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+
   console.log("recipe: ", recipe);
 
-  if (!recipe) return <p>Loading...</p>;
+  if (!recipe)
+    return (
+      <>
+        <div className="recipetempcontainercontaier">
+          <div className="recipetemplatecontainer">
+            <h1 className="recipetemp-name-skel"></h1>
+            <h2 className="recipetemp-subname-skel"></h2>
+            <p className="recipetemp-desc-skel"></p>
+          </div>
+        </div>
+      </>
+    );
 
   return (
     <>
@@ -61,28 +79,33 @@ function RecipeTemplate() {
 
           <h2 className="recipetempsubtopictitle"> Ingredients </h2>
           <div className="recipetemplist">
-            <ul>
-              {recipe.ingredients.map((ingredient, index) => (
-                <li key={index} className="recipetemp-ingredientlist">
-                  {" "}
-                  <span className="recipetemp-amount">
-                    {ingredient.amount}
-                  </span>{" "}
-                  {ingredient.ingredients_name}
-                </li>
-              ))}
-            </ul>
+            <table>
+              <tbody>
+                {recipe.ingredients.map((ingredient, index) => (
+                  <tr key={index} className="recipetemp-ingredientlist">
+                    <td>
+                      {/*<span className="recipetemp-amount">*/}
+                      {ingredient.amount}
+                    </td>
+                    {/*</span>*/}
+                    <td>{ingredient.ingredients_name}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           <h2 className="recipetempsubtopictitle"> Preparation </h2>
           <div className="recipetemplist">
-            <ol>
-              {recipe.steps.map((step, index) => (
-                <li key={index} className="">
-                  {step.instruction}
-                </li>
-              ))}
-            </ol>
+            {recipe.steps.map((step, index) => (
+              <p key={index} className="recipetemp-steps">
+                <span className="recipetemp-steps-step">Step {index + 1}</span>
+                <br />
+                {step.instruction}
+                <br />
+                <br />
+              </p>
+            ))}
           </div>
         </div>
       </div>

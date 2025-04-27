@@ -14,7 +14,7 @@
 }
 
 .recipetempsubtopictitle {
-  padding: clamp(8px, 2vw, 12px) 0;
+  padding: 0;
 }
 
 .recipetempdesc {
@@ -23,10 +23,12 @@
 }
 
 .recipetempimage {
-  width: 100%;
+  width: 60vw;
   object-fit: cover;
-  height: clamp(200px, 40vw, 575px);
+  height: clamp(200px, 30vw, 575px);
   border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 .recipetemplist {
@@ -34,16 +36,66 @@
   font-size: clamp(16px, 2vw, 20px);
   margin: 0;
   padding: 0;
+  width: 70vw;
 }
 
 .recipetemp-amount {
-  color: #817171;
+  /* color: #817171;*/
   font-weight: 400;
   text-align: right;
 }
 
+/*
 .recipetemp-ingredientlist {
   display: grid;
   grid-template-columns: 120px 1fr;
   gap: 0.5rem;
+}
+*/
+
+.recipetemplist table {
+  table-layout: auto;
+  width: 100%;
+}
+
+.recipetemp-ingredientlist tr {
+  padding: 0 0 10px 0;
+}
+
+.recipetemp-ingredientlist td:first-child {
+  width: clamp(100px, 10vw, 200px);
+}
+
+.recipetemp-ingredientlist td:last-child {
+  width: auto;
+}
+
+.recipetemp-steps-step {
+  font-weight: bold;
+}
+
+/* skeleton */
+
+.recipetemp-name-skel {
+  background-color: lightgrey;
+  padding-bottom: 10px;
+  width: 200px;
+  height: 50px;
+  border-radius: 9px;
+}
+
+.recipetemp-subname-skel {
+  background-color: lightgrey;
+  padding-bottom: 0;
+  width: 200px;
+  height: 50px;
+  border-radius: 9px;
+}
+
+.recipetemp-desc-skel {
+  background-color: lightgrey;
+  padding-bottom: 0;
+  width: 65vw;
+  height: 200px;
+  border-radius: 9px;
 }

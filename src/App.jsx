@@ -10,11 +10,13 @@ import Video from "./Homepagevideo.jsx";
 import About from "./AboutUs.jsx";
 import SiteMap from "./SiteMap.jsx";
 import Footer from "./Footer.jsx";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/faq" element={<FaQ />} />
