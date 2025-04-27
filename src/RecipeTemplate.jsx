@@ -81,17 +81,53 @@ function RecipeTemplate() {
           <div className="recipetemplist">
             <table>
               <tbody>
-                {recipe.ingredients.map((ingredient, index) => (
-                  <tr key={index} className="recipetemp-ingredientlist">
-                    <td>
-                      <span className="recipetemp-amount">
-                        {ingredient.amount}
-                      </span>
-                    </td>
+                {recipe.ingredients.map((ingredient, index) => {
+                  const endsWithOr = ingredient.ingredients_name
+                    .trim()
+                    .endsWith(", or");
+                  const previousEndsWithOr =
+                    index > 0 &&
+                    recipe.ingredients[index - 1].ingredients_name
+                      .trim()
+                      .endsWith(", or");
 
-                    <td>{ingredient.ingredients_name}</td>
-                  </tr>
-                ))}
+                  if (previousEndsWithOr) {
+                    return null;
+                  }
+
+                  if (endsWithOr) {
+                    const nextIngredient = recipe.ingredients[index + 1];
+
+                    return (
+                      <tr key={index} className="recipetemp-ingredientlist">
+                        <td>
+                          <span className="recipetemp-amount">
+                            {ingredient.amount}
+                          </span>
+                        </td>
+                        <td>
+                          {ingredient.ingredients_name}{" "}
+                          <span className="recipetemp-amount">
+                            {nextIngredient?.amount}{" "}
+                          </span>
+                          {nextIngredient?.ingredients_name}
+                        </td>
+                      </tr>
+                    );
+                  } else {
+                    return (
+                      <tr key={index} className="recipetemp-ingredientlist">
+                        <td>
+                          <span className="recipetemp-amount">
+                            {ingredient.amount}
+                          </span>
+                        </td>
+
+                        <td>{ingredient.ingredients_name}</td>
+                      </tr>
+                    );
+                  }
+                })}
               </tbody>
             </table>
           </div>
