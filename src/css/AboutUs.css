@@ -7,7 +7,7 @@
     background-image: url('/src/assets/AboutUs.png'); 
     background-size: cover;
     background-position: center;
-    padding: 70px 20px;
+    padding: 30px 20px;
     text-align: center;
     color: white;
   }
@@ -17,14 +17,14 @@
     align-items: center; 
     justify-content: center;
     gap: 15px; 
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     margin: 0;
     color: white;
   }
 
   .hero-image {
-    width: 400px; 
+    width: 350px; 
     height: auto;
   }
   
@@ -129,7 +129,7 @@
     color: #830F0F;
     font-size: 17px;
     margin: 0;
-    max-width: 420px;
+    max-width: 900px;
   }
   
   .about-us-title {
@@ -179,5 +179,80 @@
     }
     .about-us-brains .about-us-students-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 412px) {
+    .about-us-hero {
+      padding: 40px 10px;
+    }
+
+    .about-us-hero h1 {
+      font-size: 32px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-image {
+      width: 200px;
+    }
+
+    .about-us-story {
+      padding: 30px 15px;
+    }
+
+    .about-us-story h2 {
+      font-size: 28px;
+    }
+
+    .about-us-story p {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+
+    .about-us-brains {
+      min-height: auto;
+    }
+
+    .about-us-title h2 {
+      font-size: 40px;
+    }
+
+    .about-us-title span {
+      font-size: 50px;
+    }
+
+    .about-us-student-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .about-us-student-card.reverse {
+      flex-direction: column;
+    }
+
+    .about-us-student-photo {
+      width: 150px;
+      height: 150px;
+    }
+
+    .about-us-student-info h4 {
+      font-size: 22px;
+    }
+
+    .about-us-student-email {
+      font-size: 15px;
+    }
+
+    .about-us-student-info p {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+
+    .about-us-brains .about-us-students-grid {
+      padding: 30px 15px;
+      gap: 30px;
     }
   }

@@ -11,12 +11,10 @@ function AboutUs() {
     <div className="about-us-wrapper">
       <div className="about-us-page">
 
-        {/* Breadcrumb 
+        <div className="about-us-hero">
         <div className="breadcrumbs">
           <p>🏠 Home &gt; About Us</p>
-        </div>*/}
-
-        <div className="about-us-hero">
+        </div>
           <h1>ABOUT | 
           <img src={ricelogo} alt="About Us" className="hero-image" />
           </h1>
@@ -35,46 +33,46 @@ function AboutUs() {
         </div>
       </div>
 
-<div className="about-us-brains">
-  <div className="about-us-title">
-    <h2>The Brains <br /> <span>Behind</span> <br /> The Bites.</h2>
-  </div>
+      <div className="about-us-brains">
+        <div className="about-us-title">
+          <h2>The Brains <br /> <span>Behind</span> <br /> The Bites.</h2>
+        </div>
 
-  <div className="about-us-students-grid">
-    <div className="about-us-student-card">
-      <div className="about-us-student-photo"
-        style={{ backgroundImage: `url(${Amistoso})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
-      <div className="about-us-student-info">
-        <h4>Phoebe Nicole Amistoso</h4>
-        <div className="about-us-student-email">email: phoebecamistoso@su.edu.ph</div>
-        <p>Non provident dolorum et iusto accusamus eos quisquam accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui tempore tempora aut harum quia?</p>
-      </div>
-    </div>
+        <div className="about-us-students-grid">
+          <div className="about-us-student-card">
+            <div className="about-us-student-photo"
+              style={{ backgroundImage: `url(${Amistoso})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            ></div>
+            <div className="about-us-student-info">
+              <h4>Phoebe Nicole Amistoso</h4>
+              <div className="about-us-student-email">email: phoebecamistoso@su.edu.ph</div>
+              <p>Non provident dolorum et iusto accusamus eos quisquam accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui tempore tempora aut harum quia?</p>
+            </div>
+          </div>
 
-    <div className="about-us-student-card reverse">
-    <div className="about-us-student-photo"
-        style={{ backgroundImage: `url(${Orozco})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
-      <div className="about-us-student-info">
-        <h4>Ancel Kimberly Orozco</h4>
-        <div className="about-us-student-email">email: anceliorozco@su.edu.ph</div>
-        <p>Non provident dolorum et iusto accusamus eos quisquam accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui tempore tempora aut harum quia?</p>
-      </div>
-    </div>
+          <div className="about-us-student-card reverse">
+          <div className="about-us-student-photo"
+              style={{ backgroundImage: `url(${Orozco})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            ></div>
+            <div className="about-us-student-info">
+              <h4>Ancel Kimberly Orozco</h4>
+              <div className="about-us-student-email">email: anceliorozco@su.edu.ph</div>
+              <p>Non provident dolorum et iusto accusamus eos quisquam accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui tempore tempora aut harum quia?</p>
+            </div>
+          </div>
 
-    <div className="about-us-student-card">
-      <div className="about-us-student-photo"
-        style={{ backgroundImage: `url(${Inoferio})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
-      <div className="about-us-student-info">
-        <h4>Jan Carlos Inoferio</h4>
-        <div className="about-us-student-email">email: janminoferio@su.edu.ph</div>
-        <p>Non provident dolorum et iusto accusamus eos quisquam accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui tempore tempora aut harum quia?</p>
+          <div className="about-us-student-card">
+            <div className="about-us-student-photo"
+              style={{ backgroundImage: `url(${Inoferio})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            ></div>
+            <div className="about-us-student-info">
+              <h4>Jan Carlos Inoferio</h4>
+              <div className="about-us-student-email">email: janminoferio@su.edu.ph</div>
+              <p>Non provident dolorum et iusto accusamus eos quisquam accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui tempore tempora aut harum quia?</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
     </div>
   );
