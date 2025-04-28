@@ -16,14 +16,12 @@ function AboutUs() {
           <p>🏠 Home &gt; About Us</p>
         </div>*/}
 
-        {/* Hero Section */}
         <div className="about-us-hero">
           <h1>ABOUT | 
           <img src={ricelogo} alt="About Us" className="hero-image" />
           </h1>
         </div>
 
-        {/* Our Story */}
         <div className="about-us-story">
           <h2>Our Story</h2>
           <p>Lorem ipsum dolor sit amet. Id omnis blanditiis et dolores porro non assumenda illum in dignissimos corrupti sit architecto maiores! 
@@ -37,14 +35,12 @@ function AboutUs() {
         </div>
       </div>
 
-      {/* Brains Behind The Bites */}
 <div className="about-us-brains">
   <div className="about-us-title">
     <h2>The Brains <br /> <span>Behind</span> <br /> The Bites.</h2>
   </div>
 
   <div className="about-us-students-grid">
-    {/* Student 1 */}
     <div className="about-us-student-card">
       <div className="about-us-student-photo"
         style={{ backgroundImage: `url(${Amistoso})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -56,7 +52,6 @@ function AboutUs() {
       </div>
     </div>
 
-    {/* Student 2 */}
     <div className="about-us-student-card reverse">
     <div className="about-us-student-photo"
         style={{ backgroundImage: `url(${Orozco})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -68,7 +63,6 @@ function AboutUs() {
       </div>
     </div>
 
-    {/* Student 3 */}
     <div className="about-us-student-card">
       <div className="about-us-student-photo"
         style={{ backgroundImage: `url(${Inoferio})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
