@@ -1,369 +1,369 @@
 .about-us-page {
-    font-family: 'Arial', sans-serif;
-    background-color: white;
-  }
-  
-  .about-us-hero {
-    background-image: url('/src/assets/AboutUs.png'); 
-    background-size: cover;
-    background-position: center;
-    padding: 70px 20px;
-    text-align: center;
-    color: white;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+}
+
+.about-us-hero {
+  background-image: url('/src/assets/AboutUs.png'); 
+  background-size: cover;
+  background-position: center;
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
+}
+
+.about-us-hero h1 {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 15px; 
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.hero-image {
+  width: 400px; 
+  height: auto;
+}
+
+.about-us-story {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #FFE4C6;
+}
+
+.about-us-story h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.about-us-story p {
+  max-width: 1600px;
+  margin: 0 auto 30px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-us-brains {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  min-height: 700px;
+  background: none;
+  color: inherit;
+  gap: 0;
+}
+
+.about-us-brains .about-us-title {
+  flex: 0 0 33%;
+  background-color: #531010;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  min-width: 0;
+}
+
+.about-us-brains .about-us-students-grid {
+  flex: 0 0 67%;
+  background-color: #fff;
+  color: #531010;
+  padding: 70px 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  min-width: 0;
+}
+
+.about-us-student-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  background: none;
+  color: inherit;
+  border-radius: 16px;
+  box-shadow: none;
+  padding: 0;
+}
+
+.about-us-student-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-us-student-photo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.about-us-student-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.about-us-student-info h4 {
+  color: #830F0F;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+}
+
+.about-us-student-email {
+  font-size: 17px;
+  color: #830F0F;
+  margin-bottom: 6px;
+}
+
+.about-us-student-info p {
+  color: #830F0F;
+  font-size: 17px;
+  margin: 0;
+  max-width: 420px;
+}
+
+.about-us-title {
+  flex: 1;
+}
+
+.about-us-title h2 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+}
+
+.about-us-title span {
+  font-weight: 900;
+  font-size: 90px;
+  color: white;
+}
+
+.about-us-students-grid {
+  flex: 1 1 50%;
+  background-color: #fff;
+  color: #531010;
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  min-width: 0;
+}
+
+.about-us-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
   .about-us-hero h1 {
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center;
-    gap: 15px; 
-    font-size: 60px;
-    font-weight: bold;
-    margin: 0;
-    color: white;
+    font-size: 48px;
   }
 
   .hero-image {
-    width: 400px; 
-    height: auto;
+    width: 300px;
   }
-  
-  .about-us-story {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #FFE4C6;
-  }
-  
-  .about-us-story h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-  }
-  
-  .about-us-story p {
-    max-width: 1600px;
-    margin: 0 auto 30px auto;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-  }
-  
+
   .about-us-brains {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    min-height: 700px;
-    background: none;
-    color: inherit;
-    gap: 0;
+    flex-direction: column;
   }
-  
+
   .about-us-brains .about-us-title {
-    flex: 0 0 33%;
-    background-color: #531010;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 40px;
-    min-width: 0;
-  }
-  
-  .about-us-brains .about-us-students-grid {
-    flex: 0 0 67%;
-    background-color: #fff;
-    color: #531010;
-    padding: 70px 70px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    min-width: 0;
-  }
-  
-  .about-us-student-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-    background: none;
-    color: inherit;
-    border-radius: 16px;
-    box-shadow: none;
-    padding: 0;
-  }
-  
-  .about-us-student-card.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .about-us-student-photo {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 0;
-    margin-bottom: 0;
-  }
-  
-  .about-us-student-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-  }
-  
-  .about-us-student-info h4 {
-    color: #830F0F;
-    font-size: 25px;
-    font-weight: 700;
-    margin: 0 0 2px 0;
-  }
-  
-  .about-us-student-email {
-    font-size: 17px;
-    color: #830F0F;
-    margin-bottom: 6px;
-  }
-  
-  .about-us-student-info p {
-    color: #830F0F;
-    font-size: 17px;
-    margin: 0;
-    max-width: 420px;
-  }
-  
-  .about-us-title {
-    flex: 1;
-  }
-  
-  .about-us-title h2 {
-    font-size: 70px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: white;
-  }
-  
-  .about-us-title span {
-    font-weight: 900;
-    font-size: 90px;
-    color: white;
-  }
-
-  .about-us-students-grid {
-    flex: 1 1 50%;
-    background-color: #fff;
-    color: #531010;
-    padding: 60px 40px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    min-width: 0;
-  }
-  
-  .about-us-wrapper {
+    flex: unset;
     width: 100%;
-    display: flex;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .about-us-brains .about-us-students-grid {
+    flex: unset;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .about-us-title h2 {
+    font-size: 60px;
+  }
+
+  .about-us-title span {
+    font-size: 75px;
+  }
+
+  .about-us-student-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-hero {
+    padding: 50px 15px;
+  }
+
+  .about-us-hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-image {
+    width: 250px;
+  }
+
+  .about-us-story {
+    padding: 40px 15px;
+  }
+
+  .about-us-story h2 {
+    font-size: 32px;
+  }
+
+  .about-us-story p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .about-us-title h2 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .about-us-title span {
+    font-size: 65px;
+  }
+
+  .about-us-student-info h4 {
+    font-size: 22px;
+  }
+
+  .about-us-student-info p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-hero {
+    padding: 40px 10px;
+  }
+
+  .about-us-hero h1 {
+    font-size: 32px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-image {
+    width: 200px;
+  }
+
+  .about-us-story {
+    padding: 30px 10px;
+  }
+
+  .about-us-story h2 {
+    font-size: 28px;
+  }
+
+  .about-us-story p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .about-us-brains {
+    min-height: auto;
     flex-direction: column;
   }
 
-  @media (max-width: 1024px) {
-    .about-us-hero h1 {
-      font-size: 48px;
-    }
-
-    .hero-image {
-      width: 300px;
-    }
-
-    .about-us-brains {
-      flex-direction: column;
-    }
-
-    .about-us-brains .about-us-title {
-      flex: unset;
-      width: 100%;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .about-us-brains .about-us-students-grid {
-      flex: unset;
-      width: 100%;
-      padding: 40px 20px;
-    }
-
-    .about-us-title h2 {
-      font-size: 60px;
-    }
-
-    .about-us-title span {
-      font-size: 75px;
-    }
-
-    .about-us-student-photo {
-      width: 150px;
-      height: 150px;
-    }
+  .about-us-brains .about-us-title {
+    width: 100%;
+    padding: 40px 15px;
+    text-align: center;
   }
 
-  @media (max-width: 768px) {
-    .about-us-hero {
-      padding: 50px 15px;
-    }
-
-    .about-us-hero h1 {
-      font-size: 40px;
-    }
-
-    .hero-image {
-      width: 250px;
-    }
-
-    .about-us-story {
-      padding: 40px 15px;
-    }
-
-    .about-us-story h2 {
-      font-size: 32px;
-    }
-
-    .about-us-story p {
-      font-size: 16px;
-      padding: 0 20px;
-    }
-
-    .about-us-title h2 {
-      font-size: 50px;
-      text-align: center;
-    }
-
-    .about-us-title span {
-      font-size: 65px;
-    }
-
-    .about-us-student-info h4 {
-      font-size: 22px;
-    }
-
-    .about-us-student-info p {
-      font-size: 16px;
-    }
+  .about-us-brains .about-us-students-grid {
+    width: 100%;
+    padding: 30px 15px;
   }
 
-  @media (max-width: 480px) {
-    .about-us-hero {
-      padding: 40px 10px;
-    }
-
-    .about-us-hero h1 {
-      font-size: 32px;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .hero-image {
-      width: 200px;
-    }
-
-    .about-us-story {
-      padding: 30px 10px;
-    }
-
-    .about-us-story h2 {
-      font-size: 28px;
-    }
-
-    .about-us-story p {
-      font-size: 15px;
-      padding: 0 10px;
-    }
-
-    .about-us-brains {
-      min-height: auto;
-      flex-direction: column;
-    }
-
-    .about-us-brains .about-us-title {
-      width: 100%;
-      padding: 40px 15px;
-      text-align: center;
-    }
-
-    .about-us-brains .about-us-students-grid {
-      width: 100%;
-      padding: 30px 15px;
-    }
-
-    .about-us-title h2 {
-      font-size: 40px;
-      text-align: center;
-      line-height: 1;
-      margin: 0;
-    }
-
-    .about-us-title span {
-      font-size: 50px;
-      display: inline;
-      margin-left: 5px;
-    }
-
-    .about-us-student-card {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-    }
-
-    .about-us-student-card.reverse {
-      flex-direction: column;
-    }
-
-    .about-us-student-photo {
-      width: 140px;
-      height: 140px;
-    }
-
-    .about-us-student-info h4 {
-      font-size: 20px;
-    }
-
-    .about-us-student-email {
-      font-size: 15px;
-    }
-
-    .about-us-student-info p {
-      font-size: 15px;
-      padding: 0 10px;
-    }
+  .about-us-title h2 {
+    font-size: 40px;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
   }
 
-  @media (max-width: 360px) {
-    .about-us-hero h1 {
-      font-size: 28px;
-    }
-
-    .hero-image {
-      width: 180px;
-    }
-
-    .about-us-title h2 {
-      font-size: 35px;
-    }
-
-    .about-us-title span {
-      font-size: 45px;
-    }
-
-    .about-us-student-photo {
-      width: 130px;
-      height: 130px;
-    }
-
-    .about-us-student-info h4 {
-      font-size: 18px;
-    }
-
-    .about-us-student-info p {
-      font-size: 14px;
-    }
+  .about-us-title span {
+    font-size: 50px;
+    display: inline;
+    margin-left: 5px;
   }
+
+  .about-us-student-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-us-student-card.reverse {
+    flex-direction: column;
+  }
+
+  .about-us-student-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-us-student-info h4 {
+    font-size: 20px;
+  }
+
+  .about-us-student-email {
+    font-size: 15px;
+  }
+
+  .about-us-student-info p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-us-hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-image {
+    width: 180px;
+  }
+
+  .about-us-title h2 {
+    font-size: 35px;
+  }
+
+  .about-us-title span {
+    font-size: 45px;
+  }
+
+  .about-us-student-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .about-us-student-info h4 {
+    font-size: 18px;
+  }
+
+  .about-us-student-info p {
+    font-size: 14px;
+  }
+}
