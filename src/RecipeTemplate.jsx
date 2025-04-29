@@ -20,7 +20,7 @@ function RecipeTemplate() {
       const { data, error } = await supabase
         .from("recipes")
         .select(
-          `recipe_id, recipe_name, pictures(path), ingredients(amount, ingredients_name), steps(instruction)`
+          `recipe_id, recipe_name, pictures(path), ingredients(amount, ingredients_name), steps(instruction), description(desc)`
         )
         .eq("recipe_id", parsedRecipeId)
         .single();
@@ -66,10 +66,11 @@ function RecipeTemplate() {
         <div className="recipetemplatecontainer">
           <h1> {recipe.recipe_name} </h1>
           <h2 className="recipetempsubtopictitle"> Description </h2>
-          <p className="recipetempdesc">
-            {" "}
-            This is the description of the recipe
-          </p>
+          {recipe.description.map((descItem, index) => (
+            <p className="recipetempdesc">{descItem.desc}</p>
+          ))}
+
+          <br />
 
           <img
             className="recipetempimage"
@@ -94,25 +95,31 @@ function RecipeTemplate() {
                       .trim()
                       .endsWith(", or");
 
+                  const hasAmount = !!ingredient.amount;
+                  const nextIngredient = recipe.ingredients[index + 1];
+                  const hasNextAmount = !!nextIngredient?.amount;
+
                   if (previousEndsWithOr) {
                     return null;
                   }
 
                   if (endsWithOr) {
-                    const nextIngredient = recipe.ingredients[index + 1];
-
                     return (
                       <tr key={index} className="recipetemp-ingredientlist">
-                        <td>
-                          <span className="recipetemp-amount">
-                            {ingredient.amount}
-                          </span>
-                        </td>
-                        <td>
+                        {hasAmount && (
+                          <td>
+                            <span className="recipetemp-amount">
+                              {ingredient.amount}
+                            </span>
+                          </td>
+                        )}
+                        <td colSpan={hasAmount ? 1 : 2}>
                           {ingredient.ingredients_name}{" "}
-                          <span className="recipetemp-amount">
-                            {nextIngredient?.amount}{" "}
-                          </span>
+                          {hasNextAmount && (
+                            <span className="recipetemp-amount">
+                              {nextIngredient?.amount}{" "}
+                            </span>
+                          )}
                           {nextIngredient?.ingredients_name}
                         </td>
                       </tr>
@@ -120,13 +127,17 @@ function RecipeTemplate() {
                   } else {
                     return (
                       <tr key={index} className="recipetemp-ingredientlist">
-                        <td>
-                          <span className="recipetemp-amount">
-                            {ingredient.amount}
-                          </span>
-                        </td>
+                        {hasAmount && (
+                          <td>
+                            <span className="recipetemp-amount">
+                              {ingredient.amount}
+                            </span>
+                          </td>
+                        )}
 
-                        <td>{ingredient.ingredients_name}</td>
+                        <td colSpan={hasAmount ? 1 : 2}>
+                          {ingredient.ingredients_name}
+                        </td>
                       </tr>
                     );
                   }
