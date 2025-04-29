@@ -7,7 +7,7 @@
     background-image: url('/src/assets/AboutUs.png'); 
     background-size: cover;
     background-position: center;
-    padding: 30px 20px;
+    padding: 70px 20px;
     text-align: center;
     color: white;
   }
@@ -17,14 +17,14 @@
     align-items: center; 
     justify-content: center;
     gap: 15px; 
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
     margin: 0;
     color: white;
   }
 
   .hero-image {
-    width: 350px; 
+    width: 400px; 
     height: auto;
   }
   
@@ -51,7 +51,7 @@
     display: flex;
     padding: 0;
     margin: 0;
-    min-height: 750px;
+    min-height: 700px;
     background: none;
     color: inherit;
     gap: 0;
@@ -129,7 +129,7 @@
     color: #830F0F;
     font-size: 17px;
     margin: 0;
-    max-width: 900px;
+    max-width: 420px;
   }
   
   .about-us-title {
@@ -166,23 +166,91 @@
     flex-direction: column;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
+    .about-us-hero h1 {
+      font-size: 48px;
+    }
+
+    .hero-image {
+      width: 300px;
+    }
+
     .about-us-brains {
       flex-direction: column;
     }
-    .about-us-brains .about-us-title,
+
+    .about-us-brains .about-us-title {
+      flex: unset;
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
     .about-us-brains .about-us-students-grid {
       flex: unset;
-      min-width: 0;
       width: 100%;
-      padding: 40px 10px;
+      padding: 40px 20px;
     }
-    .about-us-brains .about-us-students-grid {
-      grid-template-columns: 1fr;
+
+    .about-us-title h2 {
+      font-size: 60px;
+    }
+
+    .about-us-title span {
+      font-size: 75px;
+    }
+
+    .about-us-student-photo {
+      width: 150px;
+      height: 150px;
     }
   }
 
-  @media (max-width: 412px) {
+  @media (max-width: 768px) {
+    .about-us-hero {
+      padding: 50px 15px;
+    }
+
+    .about-us-hero h1 {
+      font-size: 40px;
+    }
+
+    .hero-image {
+      width: 250px;
+    }
+
+    .about-us-story {
+      padding: 40px 15px;
+    }
+
+    .about-us-story h2 {
+      font-size: 32px;
+    }
+
+    .about-us-story p {
+      font-size: 16px;
+      padding: 0 20px;
+    }
+
+    .about-us-title h2 {
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .about-us-title span {
+      font-size: 65px;
+    }
+
+    .about-us-student-info h4 {
+      font-size: 22px;
+    }
+
+    .about-us-student-info p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
     .about-us-hero {
       padding: 40px 10px;
     }
@@ -198,7 +266,7 @@
     }
 
     .about-us-story {
-      padding: 30px 15px;
+      padding: 30px 10px;
     }
 
     .about-us-story h2 {
@@ -206,20 +274,37 @@
     }
 
     .about-us-story p {
-      font-size: 16px;
+      font-size: 15px;
       padding: 0 10px;
     }
 
     .about-us-brains {
       min-height: auto;
+      flex-direction: column;
+    }
+
+    .about-us-brains .about-us-title {
+      width: 100%;
+      padding: 40px 15px;
+      text-align: center;
+    }
+
+    .about-us-brains .about-us-students-grid {
+      width: 100%;
+      padding: 30px 15px;
     }
 
     .about-us-title h2 {
       font-size: 40px;
+      text-align: center;
+      line-height: 1;
+      margin: 0;
     }
 
     .about-us-title span {
       font-size: 50px;
+      display: inline;
+      margin-left: 5px;
     }
 
     .about-us-student-card {
@@ -234,12 +319,12 @@
     }
 
     .about-us-student-photo {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
 
     .about-us-student-info h4 {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     .about-us-student-email {
@@ -250,9 +335,35 @@
       font-size: 15px;
       padding: 0 10px;
     }
+  }
 
-    .about-us-brains .about-us-students-grid {
-      padding: 30px 15px;
-      gap: 30px;
+  @media (max-width: 360px) {
+    .about-us-hero h1 {
+      font-size: 28px;
+    }
+
+    .hero-image {
+      width: 180px;
+    }
+
+    .about-us-title h2 {
+      font-size: 35px;
+    }
+
+    .about-us-title span {
+      font-size: 45px;
+    }
+
+    .about-us-student-photo {
+      width: 130px;
+      height: 130px;
+    }
+
+    .about-us-student-info h4 {
+      font-size: 18px;
+    }
+
+    .about-us-student-info p {
+      font-size: 14px;
     }
   }
