@@ -1,0 +1,141 @@
+.searchbarcontainer {
+    width: 100%;
+    padding: 25px 2%;
+    box-sizing: border-box;
+}
+
+.searchbarcontainer h1 {
+    text-align: center;
+    line-height: 1;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem); 
+}
+
+.searchbarcontainer p {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.searchbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.searchbar input {
+    flex: 1 1 750px;
+    padding: clamp(0.3rem, 1vw, 0.6rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    border: 2px solid #7D1D1B;
+    border-radius: 5px;
+    background-color: #FFE5C7;
+    box-sizing: border-box;
+
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+.searchbar button {
+    flex: 0 0 auto;
+    padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.75rem, 2vw, 1.25rem);
+    font-size: clamp(0.85rem, 1.6vw, 1rem);
+    border: none;
+    border-radius: 5px;
+    background-color: #7D1D1B;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.searchbar button:hover {
+    background-color: #912321;
+}
+
+
+.searchbar button:after {
+    background-color: #4b100f;
+}
+
+#filterDropdown {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: white;
+    opacity: 0.95;
+    min-width: 385px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px;
+    max-height: 300px; 
+    overflow-y: auto;
+    padding-top: 20px; 
+    padding-left: 25px;
+}
+  
+.filter-wrapper {
+    position: relative;
+}
+  
+.filterdropdown {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 23px;
+    color: #5e2a1f;
+}
+  
+.filterdropdown input{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 3px;
+    width: 10px;
+    background-color: #a31010;
+    border: solid;
+    border-color: #7D1D1B;
+    border-width: 2px;
+    scale: 1.5;
+    padding-bottom: 20px;
+    padding-right: 30px;
+}
+
+  .filter-item {
+    font-size: 18px;
+    color: #5e2a1f;
+    padding-left: 5px;
+  }
+  
+  #filterTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #361711;
+  }
+
+  .clearContainer {
+    display: flex;
+  }
+
+  .clearContainer button {
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #644544;
+    color: #fff;
+    cursor: pointer;
+    padding: 1px 8px;
+    margin: 0;
+    margin-left: 75px;
+}
+
+
