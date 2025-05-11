@@ -15,7 +15,7 @@ function Homepagevideo() {
                 <iframe 
                     width="100%" 
                     height="100%" 
-                    src="https://www.youtube.com/embed/cs-kPAMfc2Y?si=yy_ZM8JYOUCfpxJF" 
+                    src="https://www.youtube.com/watch?v=AO_lgv6cPpE" 
                     title="Rice N' Shine Video" 
                     frameborder="0" 
                     allowfullscreen>
