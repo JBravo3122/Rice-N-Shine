@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "./css/RecipeTemplate.css";
 import { useParams } from "react-router-dom";
 import { supabase } from "./supabaseclient";
+import home from "./assets/home.png";
+import rchevron from "./assets/right-chevron.png";
+import lchevron from "./assets/back-arrow.png";
 
 function RecipeTemplate() {
   const [recipe, setRecipe] = useState(null);
@@ -62,6 +65,11 @@ function RecipeTemplate() {
     return (
       <>
         <div className="recipetempcontainercontaier">
+          <div className="breadcrumbs">
+            <p>
+              <img src={home} /> <img src={rchevron} /> Recipes
+            </p>
+          </div>
           <div className="recipetemplatecontainer">
             <h1 className="recipetemp-name-skel"></h1>
             <h2 className="recipetemp-subname-skel"></h2>
@@ -74,6 +82,12 @@ function RecipeTemplate() {
   return (
     <>
       <div className="recipetempcontainercontainer">
+        <div className="breadcrumbs">
+          <p>
+            <img src={home} /> <img src={rchevron} /> Recipes{" "}
+            <img src={rchevron} /> {recipe.recipe_name}
+          </p>
+        </div>
         <div className="recipetemplatecontainer">
           <h1> {recipe.recipe_name} </h1>
           <h2 className="recipetempsubtopictitle"> Description </h2>
@@ -160,37 +174,44 @@ function RecipeTemplate() {
           <br />
 
           <h2 className="recipetempsubtopictitle"> Preparation </h2>
-          <div className="recipetemplist">
-            {recipe.steps.map((step, index) => (
-              <p
-                key={index}
-                className={`recipetemp-steps ${
-                  index === currentStep ? "highlight-step" : ""
-                }`}
-              >
-                <span className="recipetemp-steps-step">Step {index + 1}</span>
-                <br />
-                {step.instruction}
-                <br />
-                <br />
-              </p>
-            ))}
-          </div>
-          <div className="step-navigation">
-            <button onClick={() => setCurrentStep((i) => Math.max(i - 1, 0))}>
-              Previous
-            </button>
-            <button onClick={handleSpeak}> Speak Step {currentStep + 1}</button>
+          <div>
+            <div className="step-navigation">
+              <button onClick={() => setCurrentStep((i) => Math.max(i - 1, 0))}>
+                Previous
+              </button>
+              <button onClick={handleSpeak}>
+                {" "}
+                Speak Step {currentStep + 1}
+              </button>
 
-            <button
-              onClick={() =>
-                setCurrentStep((i) =>
-                  Math.min(i + 1, stepInstructions.length - 1)
-                )
-              }
-            >
-              Next Step
-            </button>
+              <button
+                onClick={() =>
+                  setCurrentStep((i) =>
+                    Math.min(i + 1, stepInstructions.length - 1)
+                  )
+                }
+              >
+                Next Step
+              </button>
+            </div>
+            <div className="recipetemplist">
+              {recipe.steps.map((step, index) => (
+                <p
+                  key={index}
+                  className={`recipetemp-steps ${
+                    index === currentStep ? "highlight-step" : ""
+                  }`}
+                >
+                  <span className="recipetemp-steps-step">
+                    Step {index + 1}
+                  </span>
+                  <br />
+                  {step.instruction}
+                  <br />
+                  <br />
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>

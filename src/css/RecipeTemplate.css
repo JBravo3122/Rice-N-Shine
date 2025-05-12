@@ -100,8 +100,12 @@
   margin-bottom: 10px;
 }
 
+.step-navigation {
+  position: sticky;
+}
+
 .highlight-step {
-  background-color: #f0ffe0;
-  border-left: 5px solid green;
+  background-color: #fef5eb;
+  border-left: 5px solid #ffc787;
   padding-left: 10px;
 }
