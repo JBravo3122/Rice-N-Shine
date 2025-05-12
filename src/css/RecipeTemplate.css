@@ -102,6 +102,31 @@
 
 .step-navigation {
   position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: auto;
+  height: 100px;
+  background: #fef5eb;
+  margin: 20px 0;
+}
+
+.step-navigation button {
+  border: 1px solid #ffc787;
+  background-color: white;
+  height: 50px;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  padding: 5px;
+}
+
+.step-navigation button:hover {
+  box-shadow: 0 0 0 4px #ffc787;
+  cursor: pointer;
 }
 
 .highlight-step {
