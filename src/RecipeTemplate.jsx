@@ -47,6 +47,17 @@ function RecipeTemplate() {
 
   console.log("recipe: ", recipe);
 
+  const stepInstructions = recipe?.steps?.map((step) => step.instruction) || [];
+
+  const handleSpeak = () => {
+    const currentText = stepInstructions[currentStep];
+    if (currentText) {
+      window.speechSynthesis.cancel(); //stops previous tts if needed
+      const utterance = new SpeechSynthesisUtterance(currentText);
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
   if (!recipe)
     return (
       <>
@@ -151,7 +162,12 @@ function RecipeTemplate() {
           <h2 className="recipetempsubtopictitle"> Preparation </h2>
           <div className="recipetemplist">
             {recipe.steps.map((step, index) => (
-              <p key={index} className="recipetemp-steps">
+              <p
+                key={index}
+                className={`recipetemp-steps ${
+                  index === currentStep ? "highlight-step" : ""
+                }`}
+              >
                 <span className="recipetemp-steps-step">Step {index + 1}</span>
                 <br />
                 {step.instruction}
@@ -159,6 +175,22 @@ function RecipeTemplate() {
                 <br />
               </p>
             ))}
+          </div>
+          <div className="step-navigation">
+            <button onClick={() => setCurrentStep((i) => Math.max(i - 1, 0))}>
+              Previous
+            </button>
+            <button onClick={handleSpeak}> Speak Step {currentStep + 1}</button>
+
+            <button
+              onClick={() =>
+                setCurrentStep((i) =>
+                  Math.min(i + 1, stepInstructions.length - 1)
+                )
+              }
+            >
+              Next Step
+            </button>
           </div>
         </div>
       </div>
