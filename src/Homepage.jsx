@@ -142,7 +142,7 @@ function Homepage() {
       </div>
 
       <div className="homepage-check-video">
-        <div className="homepage-secondslide-video"></div>
+        <img className="homepage-secondslide-video" src={VideoThumbnail} alt="Video Thumbnail"/>
         <div className="homepage-videocontent">
           <h3>Check Out <br />Our Video</h3>
           <button
