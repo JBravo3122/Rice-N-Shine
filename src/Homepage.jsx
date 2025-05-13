@@ -147,12 +147,11 @@ function Homepage() {
           <img className="homepage-secondslide-video" src={VideoThumbnail} alt="Video Thumbnail"/>
         <div className="homepage-videocontent">
           <h3>Check Out <br />Our Video</h3>
-          <br /><br /><br />
           <button
             className="homepage-watch-video"
             onClick={() => navigate("/homepage-video")}
           >
-            Watch Video
+            Watch Now
           </button>
         </div>
       </div>
@@ -175,8 +174,7 @@ function Homepage() {
               backgroundImage: `url(${recipe.image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "400px",
-              borderRadius: "10px"
+              borderRadius: "10px 10px 0 0"
             }}
           ></div>
           <div className="homepage-recipe-info">
@@ -192,3 +190,5 @@ function Homepage() {
 }
 
 export default Homepage;
+
+
