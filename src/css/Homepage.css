@@ -254,3 +254,25 @@ background-color: #8e1f1f;
   transform: translateX(0);
   position: relative;
 }
+
+@media (max-width: 1200px) {
+  .homepage-check-video {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .homepage-secondslide-video {
+    max-width: 95vw;
+    height: 220px;
+    margin-left: 0;
+  }
+  .homepage-videocontent {
+    margin-left: 0;
+    margin-top: 0;
+    min-width: 200px;
+  }
+  .homepage-videocontent h3 {
+    font-size: 2.2rem;
+  }
+}
