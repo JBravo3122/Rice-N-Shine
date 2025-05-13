@@ -18,7 +18,7 @@ function Homepagevideo() {
                     src="https://www.youtube.com/embed/AO_lgv6cPpE?si=cAEx-5R22bgSsfR5" 
                     title="Rice N' Shine Video" 
                     frameborder="0" 
-                    allowfullscreen>
+                    allowFullScreen>
                 </iframe>
             </div>
         </div>
