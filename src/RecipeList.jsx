@@ -53,15 +53,6 @@ function RecipeList() {
         (region) => selectedRegion[region]
       );
 
-      if (selectedRegionNames.length > 0) {
-        query = query.in("regions.region_name", selectedRegionNames);
-      } else if (selectedGroup !== null) {
-        const regionIds = groupToRegionIds[selectedGroup];
-        if (regionIds) {
-          query = query.in("region_id", regionIds);
-        }
-      }
-
       const { data, error } = await query;
 
       if (error) {
@@ -73,9 +64,23 @@ function RecipeList() {
             ? recipe.pictures[0].path
             : "/default-image.jpg",
           region_name: recipe.regions?.region_name || "Unknown Region",
+          group_id: recipe.regions?.island_group?.group_id || null,
         }));
 
-        const filteredData = uniqueRecipes.filter((recipe) =>
+        let filteredData = uniqueRecipes;
+
+        if (selectedRegionNames.length > 0) {
+          filteredData = filteredData.filter((recipe) =>
+            selectedRegionNames.includes(recipe.region_name)
+          );
+        } else if (selectedGroup !== null) {
+          const regionIds = groupToRegionIds[selectedGroup];
+          filteredData = filteredData.filter((recipe) =>
+            regionIds.includes(recipe.recipe_id)
+          );
+        }
+
+        filteredData = filteredData.filter((recipe) =>
           recipe.recipe_name.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
