@@ -1,6 +1,6 @@
 .searchbarcontainer {
     width: 100%;
-    padding: 25px 2%;
+    padding: 25px 2% 0;
     box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .searchbar input {
-    flex: 1 1 750px;
+    flex: 1 1 1000px;
     padding: clamp(0.3rem, 1vw, 0.6rem);
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     border: 2px solid #7D1D1B;
@@ -48,7 +48,7 @@
 
 .searchbar button {
     flex: 0 0 auto;
-    padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.75rem, 2vw, 1.25rem);
+    padding: clamp(0.5rem, 1vw, 0.15rem) clamp(0.75rem, 1vw, 1.0rem);
     font-size: clamp(0.85rem, 1.6vw, 1rem);
     border: none;
     border-radius: 5px;
@@ -138,4 +138,19 @@
     margin-left: 75px;
 }
 
+.searchbar button {
+  margin-left: 6px;
+}
 
+.voice-btn {
+  background-color: #2563eb; /* Blue */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.voice-btn:disabled {
+  background-color: #9ca3af; /* Gray */
+  cursor: not-allowed;
+}

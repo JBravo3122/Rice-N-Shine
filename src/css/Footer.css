@@ -56,6 +56,7 @@
     gap: 3vw;
     flex: 1;
     z-index: 1;
+    color: #ffe0bd;
   }
   
   .navlinks h2 {
@@ -64,12 +65,23 @@
     min-width: 50px;
   }
   
-  .navlinks Link {
+  .navlinks a {
     text-decoration: none;
     color: #ffe0bd;
     font-weight: 400;
+    transition: color 0.3s ease-in-out;
   }
-  
+
+  .navlinks a:hover {
+    color: #ff6308;
+ 
+}
+
+  .navlinks a:hover::after {
+    transform: scaleX(1);
+    
+}
+
   .scrollToTopBtn {
     display: flex;
     align-items: center;

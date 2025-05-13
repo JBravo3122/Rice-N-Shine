@@ -42,7 +42,6 @@
 
 .reclist-tabButtons {
   width: 100%;
-  margin-left: 50px;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -62,6 +61,7 @@
 .reclist-allButtons {
   display: flex;
   gap: 30px;
+  margin:auto;
 }
 
 .reclist-allButtons button {
