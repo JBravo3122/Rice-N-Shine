@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./css/RecipeList.css";
+import "./css/Breadcrumbs.css";
+import home from "./assets/home.png";
+import rArrow from "./assets/right-chevron.png";
 import SearchBar from "./SearchBar.jsx";
 import { Link } from "react-router-dom";
 import { supabase } from "./supabaseclient.js";
@@ -42,6 +45,7 @@ function RecipeList() {
         .select(
           `
         recipe_id, 
+        region_id,
         recipe_name, 
         pictures(path), 
         regions!region_id(region_name, island_group!group_id(group_name))
@@ -60,6 +64,7 @@ function RecipeList() {
       } else {
         const uniqueRecipes = data.map((recipe) => ({
           ...recipe,
+          region_id: recipe.region_id,
           picture_path: recipe.pictures?.length
             ? recipe.pictures[0].path
             : "/default-image.jpg",
@@ -76,7 +81,7 @@ function RecipeList() {
         } else if (selectedGroup !== null) {
           const regionIds = groupToRegionIds[selectedGroup];
           filteredData = filteredData.filter((recipe) =>
-            regionIds.includes(recipe.recipe_id)
+            regionIds.includes(recipe.region_id)
           );
         }
 
@@ -94,8 +99,12 @@ function RecipeList() {
   return (
     <>
       <div className="reclist-container">
-        <div className="breadcrumbs">
-          <p>Home &gt; Recipes</p>
+        <div className="breadcrumbs-container">
+          <div className="breadcrumbs">
+            <p>
+              <img src={home} /> Home &gt; Recipes
+            </p>
+          </div>
         </div>
         <SearchBar
           searchQuery={searchQuery}
@@ -108,6 +117,9 @@ function RecipeList() {
             <div className="reclist-allButtons">
               <button
                 type="button"
+                className={`reclist-button ${
+                  selectedGroup === null ? "reclist-selectedButton" : ""
+                }`}
                 onClick={() => {
                   setSelectedRegion({});
                   setSelectedGroup(null);
@@ -117,6 +129,9 @@ function RecipeList() {
               </button>
               <button
                 type="button"
+                className={`reclist-button ${
+                  selectedGroup === 1 ? "reclist-selectedButton" : ""
+                }`}
                 onClick={() => {
                   setSelectedRegion({});
                   setSelectedGroup(1);
@@ -126,6 +141,9 @@ function RecipeList() {
               </button>
               <button
                 type="button"
+                className={`reclist-button ${
+                  selectedGroup === 2 ? "reclist-selectedButton" : ""
+                }`}
                 onClick={() => {
                   setSelectedRegion({});
                   setSelectedGroup(2);
@@ -135,6 +153,9 @@ function RecipeList() {
               </button>
               <button
                 type="button"
+                className={`reclist-button ${
+                  selectedGroup === 3 ? "reclist-selectedButton" : ""
+                }`}
                 onClick={() => {
                   setSelectedRegion({});
                   setSelectedGroup(3);

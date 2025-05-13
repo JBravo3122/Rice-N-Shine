@@ -1,0 +1,12 @@
+.breadcrumbs-container {
+  width: 55vw;
+  text-align: left;
+  display: flex;
+  margin: 25px 50px 1px;
+  font-size: 20px;
+}
+
+.breadcrumbs img {
+  width: 30px;
+  margin: 0 10px;
+}

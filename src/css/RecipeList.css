@@ -61,10 +61,10 @@
 .reclist-allButtons {
   display: flex;
   gap: 30px;
-  margin:auto;
+  margin: auto;
 }
 
-.reclist-allButtons button {
+.reclist-button {
   background-color: #bb1f1f;
   border-radius: 100px;
   border: 4px solid transparent;
@@ -76,63 +76,19 @@
   box-sizing: border-box;
 }
 
-.reclist-allButtons button:hover,
-.reclist-allButtons button:active {
+.reclist-button:hover,
+.reclist-button:active {
   border-color: #fdbb11;
+}
+
+.reclist-selectedButton {
+  border: 4px solid #fdbb11;
+  color: #fdbb11;
 }
 
 .allRecipes-container {
   display: flex;
   align-items: flex-start;
-}
-
-/* Side Bar */
-
-.reclist-sideBar {
-  width: 200px;
-  margin-left: 50px;
-  margin-right: 80px;
-  /*border: 1px solid red;*/
-}
-
-.reclist-sideBar h4 {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.reclist-regionlist {
-  width: 150px;
-  display: flex;
-  float: right;
-  margin: 0 auto;
-  margin-top: -20px;
-  padding: 0;
-}
-
-.reclist-regionlist ul {
-  font-size: 20px;
-  padding: 0;
-  /*border: 1px solid purple;*/
-}
-
-.reclist-regionlist li {
-  color: black;
-  list-style-type: square;
-  cursor: pointer;
-}
-
-.reclist-regionlist ul li::marker {
-  color: grey;
-  font-size: 1.5em;
-}
-
-.reclist-regionlist a {
-  text-decoration: none;
-}
-
-.reclist-regionlist a:hover {
-  text-decoration: underline;
 }
 
 /* Recipes */

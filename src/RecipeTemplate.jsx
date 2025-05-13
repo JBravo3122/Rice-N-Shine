@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./css/RecipeTemplate.css";
+import "./css/Breadcrumbs.css";
 import { useParams } from "react-router-dom";
 import { supabase } from "./supabaseclient";
 import home from "./assets/home.png";
-import rchevron from "./assets/right-chevron.png";
-import lchevron from "./assets/back-arrow.png";
+import rArrow from "./assets/right-chevron.png";
 
 function RecipeTemplate() {
   const [recipe, setRecipe] = useState(null);
@@ -42,12 +42,6 @@ function RecipeTemplate() {
     fetchRecipe();
   }, [recipe_id]);
 
-  const goToNextStep = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
-
   console.log("recipe: ", recipe);
 
   const stepInstructions = recipe?.steps?.map((step) => step.instruction) || [];
@@ -65,10 +59,12 @@ function RecipeTemplate() {
     return (
       <>
         <div className="recipetempcontainercontaier">
-          <div className="breadcrumbs">
-            <p>
-              <img src={home} /> <img src={rchevron} /> Recipes
-            </p>
+          <div className="breadcrumbs-container">
+            <div className="breadcrumbs">
+              <p>
+                <img src={home} /> Home &gt; Recipes
+              </p>
+            </div>
           </div>
           <div className="recipetemplatecontainer">
             <h1 className="recipetemp-name-skel"></h1>
@@ -82,11 +78,12 @@ function RecipeTemplate() {
   return (
     <>
       <div className="recipetempcontainercontainer">
-        <div className="breadcrumbs">
-          <p>
-            <img src={home} /> <img src={rchevron} /> Recipes{" "}
-            <img src={rchevron} /> {recipe.recipe_name}
-          </p>
+        <div className="breadcrumbs-container">
+          <div className="breadcrumbs">
+            <p>
+              <img src={home} /> Home <img src={rArrow} /> Recipes
+            </p>
+          </div>
         </div>
         <div className="recipetemplatecontainer">
           <h1> {recipe.recipe_name} </h1>
