@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./css/RecipeList.css";
+import SearchBar from "./SearchBar.jsx";
 import { Link } from "react-router-dom";
 import { supabase } from "./supabaseclient.js";
 
@@ -57,23 +58,14 @@ function RecipeList() {
 
   return (
     <>
+    
       <div className="reclist-container">
         <div className="breadcrumbs">
           <p>Home &gt; Recipes</p>
         </div>
+        <SearchBar />
         <div className="reclist-body">
-          <div className="reclist-title">
-            <h1>Regions N' Recipes</h1>
-            <hr />
-            <p>
-              <i>Taste the Philippines, One Region at a Time</i>
-            </p>
-          </div>
-          <br />
           <div className="reclist-tabButtons">
-            <div className="reclist-searchBar">
-              <input type="text" placeholder="Search Recipe"></input>
-            </div>
             <div className="reclist-allButtons">
               <button
                 type="button"
@@ -114,7 +106,7 @@ function RecipeList() {
             </div>
           </div>
           <div className="allRecipes-container">
-            <div className="reclist-sideBar">
+            {/* <div className="reclist-sideBar">
               <h4>Regions</h4>
               <div className="reclist-regionlist">
                 <ul>
@@ -318,7 +310,7 @@ function RecipeList() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
             <div className="reclist-recipes">
               {recipes.length > 0
                 ? recipes.map((recipe) => (

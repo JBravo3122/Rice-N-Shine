@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/Homepage.css";
+import VideoThumbnail from "./assets/RiceNShineVideoThumbnail.png";
 import { supabase } from "./supabaseclient.js";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -142,9 +143,11 @@ function Homepage() {
       </div>
 
       <div className="homepage-check-video">
-        <img className="homepage-secondslide-video" src={VideoThumbnail} alt="Video Thumbnail"/>
+        
+          <img className="homepage-secondslide-video" src={VideoThumbnail} alt="Video Thumbnail"/>
         <div className="homepage-videocontent">
           <h3>Check Out <br />Our Video</h3>
+          <br /><br /><br />
           <button
             className="homepage-watch-video"
             onClick={() => navigate("/homepage-video")}

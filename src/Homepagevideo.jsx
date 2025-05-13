@@ -9,7 +9,7 @@ function Homepagevideo() {
                 <p>🏠 Home &gt;</p>
             </div>
 
-            <h2 class="video-title">Our Video Title</h2>
+            <h2 class="video-title">Rice N’ Shine: A Flavorful Filipino Food Guide by Students</h2>
 
             <div class="video-container">
                 <iframe 
