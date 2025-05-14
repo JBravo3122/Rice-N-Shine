@@ -1,0 +1,47 @@
+.contact-container {
+  width: 100%;
+  padding: 0px 10% 1%;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-input,
+.contact-textarea,
+.contact-select {
+  background-color: #FFE5C7;
+  border: 2px solid #7D1D1B;
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-textarea {
+  resize: vertical;
+}
+
+.contact-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #7D1D1B;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
