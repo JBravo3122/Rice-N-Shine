@@ -5,7 +5,6 @@ import "./css/Breadcrumbs.css";
 import { useParams } from "react-router-dom";
 import { supabase } from "./supabaseclient";
 import home from "./assets/home.png";
-import rArrow from "./assets/right-chevron.png";
 
 function RecipeTemplate() {
   const [recipe, setRecipe] = useState(null);
