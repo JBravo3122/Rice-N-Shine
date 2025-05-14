@@ -1,28 +1,86 @@
 .sitemapbreadcrumbcontainer {
   margin: 0 auto;
-  min-height: 65vh;
-  height: 85vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .sitemapcontainer {
-  padding: clamp(20px, 5vw, 10px) clamp(125px, 5vw, 150px);
-  font-size: clamp(21px, 2vw, 30px);
+  padding: clamp(1rem, 5vw, 2rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   box-sizing: border-box;
   overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .sitemaptitle {
   display: block;
-  margin: auto;
-  height: 150px;
-  width: 350px;
+  margin: 2rem auto;
+  width: min(350px, 90%);
+  height: auto;
 }
 
 .subtopictitle {
-  padding: 0 clamp(8px, 2vw, 55px);
+  padding: 0 clamp(0.5rem, 2vw, 2rem);
+  margin-left: 1rem;
+  list-style-type: circle !important;
 }
 
 .breadcrumbicon {
-  font-size: 16px;
-  margin-right: 5px;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  margin-right: 0.5rem;
+}
+
+.sitemapcontainer ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  font-size: 1.2em;
+  margin: 1rem 0;
+}
+
+.sitemapcontainer li {
+  margin: 0.5rem 0;
+}
+
+.sitemapcontainer a {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.sitemapcontainer a:hover {
+  color: #666;
+}
+
+.sitemapcontainer ul ul {
+  list-style-type: circle !important;
+  padding-left: 2.0rem;
+  text-decoration: underline;
+  font-size: 1.0em;
+}
+
+@media (max-width: 768px) {
+  .sitemapcontainer {
+    padding: 1rem;
+  }
+  
+  .sitemaptitle {
+    margin: 1rem auto;
+  }
+  
+  .subtopictitle {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitemapcontainer {
+    font-size: 0.9rem;
+  }
+  
+  .sitemaptitle {
+    width: 80%;
+  }
 }
