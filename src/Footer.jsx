@@ -51,6 +51,11 @@ function Footer() {
                       Site Map
                   </Link>
                 </h2>
+                <h2>
+                  <Link to="/contactus" onClick={scrollToTop}>
+                      Contact Us
+                  </Link>
+                </h2>
             </div>
             <button onClick={scrollToTop} className="scrollToTopBtn">
               <p>Scroll to Top</p>
