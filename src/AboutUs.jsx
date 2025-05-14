@@ -77,9 +77,11 @@ function AboutUs() {
                 email: phoebecamistoso@su.edu.ph
               </div>
               <p>
-                Non provident dolorum et iusto accusamus eos quisquam
-                accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui
-                tempore tempora aut harum quia?
+                Phoebe Nicole Amistoso is a student of Silliman University's
+                Bachelor of Science in Information Technology. She isn't
+                well-versed in cooking, but she loves attempting new recipes
+                that catch her eye. Until today, she looks for new kinds of food
+                that she could create with her family.
               </p>
             </div>
           </div>
