@@ -50,7 +50,7 @@ function RecipeList() {
         regions!region_id(region_name, island_group!group_id(group_name))
       `
         )
-        .order("region_id", { ascending: true }); // fetches all recipes
+        .order("recipe_name", { ascending: true }); // fetches all recipes
 
       const selectedRegionNames = Object.keys(selectedRegion).filter(
         (region) => selectedRegion[region]
