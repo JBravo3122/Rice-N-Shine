@@ -1,25 +1,28 @@
-.sitemapcontainer{
-    padding: clamp(20px, 5vw, 10px) clamp(125px, 5vw, 150px);
-    font-size: clamp(21px, 2vw, 30px);
-    
+.sitemapbreadcrumbcontainer {
+  margin: 0 auto;
+  min-height: 65vh;
+  height: 85vh;
 }
 
-.sitemaptitle{
-    display: block;
-    margin:auto;
-    height:150px;
-    width:350px;
+.sitemapcontainer {
+  padding: clamp(20px, 5vw, 10px) clamp(125px, 5vw, 150px);
+  font-size: clamp(21px, 2vw, 30px);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.subtopictitle{
-    padding: 0 clamp(8px, 2vw, 55px);
+.sitemaptitle {
+  display: block;
+  margin: auto;
+  height: 150px;
+  width: 350px;
+}
+
+.subtopictitle {
+  padding: 0 clamp(8px, 2vw, 55px);
 }
 
 .breadcrumbicon {
-    font-size: 16px;
-    margin-right: 5px;
-}
-
-.sitemapbreadcrumbcontainer{
-    margin: 0 auto;
+  font-size: 16px;
+  margin-right: 5px;
 }

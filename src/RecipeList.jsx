@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./css/RecipeList.css";
 import "./css/Breadcrumbs.css";
 import home from "./assets/home.png";
-import rArrow from "./assets/right-chevron.png";
-import SearchBar from "./SearchBar.jsx";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar.jsx";
 import { supabase } from "./supabaseclient.js";
 
 function RecipeList() {
@@ -99,20 +98,25 @@ function RecipeList() {
   return (
     <>
       <div className="reclist-container">
-        <div className="breadcrumbs-container">
-          <div className="breadcrumbs">
-            <p>
-              <img src={home} /> Home &gt; Recipes
-            </p>
-          </div>
-        </div>
-        <SearchBar
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          selectedRegions={selectedRegion}
-          setSelectedRegions={setSelectedRegion}
-        />
         <div className="reclist-body">
+          <div className="breadcrumbs-container">
+            <div className="breadcrumbs">
+              <p>
+                <Link to="/" className="breadcrumbs-Link">
+                  <img src={home} /> Home
+                </Link>{" "}
+                &gt; Recipes
+              </p>
+            </div>
+          </div>
+          <SearchBar
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            selectedRegions={selectedRegion}
+            setSelectedRegions={setSelectedRegion}
+          />
+          <br />
+          <br />
           <div className="reclist-tabButtons">
             <div className="reclist-allButtons">
               <button

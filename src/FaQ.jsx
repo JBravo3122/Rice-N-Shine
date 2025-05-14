@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./css/FaQ.css";
 import downArrow from "./assets/down-arrow.png";
 import upArrow from "./assets/up-arrow.png";
-import Header from "./Header";
+import "./css/Breadcrumbs.css";
+import home from "./assets/home.png";
+import { Link } from "react-router-dom";
 
 function FaQ() {
   const [openIndex, setOpenIndex] = useState(null); // what tracks which question was clicked
@@ -36,7 +38,7 @@ function FaQ() {
       question: "Are there recipes for beginners?",
       answer:
         "Yes! All of our recipes are designed to be easy to follow and suitable for beginners. We make sure the instructions are clear and simple, so anyone can cook with confidence.",
-    },    
+    },
     {
       question: "Do you feature recipes from different cuisines?",
       answer:
@@ -50,17 +52,25 @@ function FaQ() {
     {
       question: "Do I need an account to use the website?",
       answer:
-        "No account is needed to browse and use the recipes! All our recipes and features are completely free and accessible to everyone."
+        "No account is needed to browse and use the recipes! All our recipes and features are completely free and accessible to everyone.",
     },
   ];
 
   return (
     <>
       <div className="faq-container">
-        <div className="breadcrumbs">
-          <p>Home &gt; Frequently Asked Questions</p>
+        <div className="breadcrumbs-container">
+          <div className="breadcrumbs">
+            <p>
+              <Link to="/" className="breadcrumbs-Link">
+                <img src={home} /> Home
+              </Link>{" "}
+              &gt; Frequently Asked Questions
+            </p>
+          </div>
         </div>
         <div className="faq-body">
+          <br />
           <div className="faq-title">
             <h1>Frequently Asked Questions</h1>
             <hr />

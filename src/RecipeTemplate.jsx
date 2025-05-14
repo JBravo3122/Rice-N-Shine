@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./css/RecipeTemplate.css";
 import "./css/Breadcrumbs.css";
 import { useParams } from "react-router-dom";
@@ -62,7 +63,10 @@ function RecipeTemplate() {
           <div className="breadcrumbs-container">
             <div className="breadcrumbs">
               <p>
-                <img src={home} /> Home &gt; Recipes
+                <Link to="/" className="breadcrumbs-Link">
+                  <img src={home} /> Home
+                </Link>{" "}
+                &gt; <Link to="/recipelist"> Recipes</Link> &gt;
               </p>
             </div>
           </div>
@@ -78,14 +82,23 @@ function RecipeTemplate() {
   return (
     <>
       <div className="recipetempcontainercontainer">
-        <div className="breadcrumbs-container">
-          <div className="breadcrumbs">
-            <p>
-              <img src={home} /> Home <img src={rArrow} /> Recipes
-            </p>
-          </div>
-        </div>
         <div className="recipetemplatecontainer">
+          <div className="breadcrumbs-container">
+            <div className="breadcrumbs">
+              <p>
+                <Link to="/" className="breadcrumbs-Link">
+                  <img src={home} /> Home
+                </Link>{" "}
+                &gt;{" "}
+                <Link to="/recipelist" className="breadcrumbs-Link">
+                  {" "}
+                  Recipes
+                </Link>{" "}
+                &gt; {recipe.recipe_name}
+              </p>
+            </div>
+          </div>
+          <br />
           <h1> {recipe.recipe_name} </h1>
           <h2 className="recipetempsubtopictitle"> Description </h2>
           {recipe.description.map((descItem, index) => (
