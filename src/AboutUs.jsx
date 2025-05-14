@@ -19,7 +19,7 @@ function AboutUs() {
               <Link to="/" className="breadcrumbs-Link">
                 <img src={home} /> Home
               </Link>{" "}
-              &gt; Recipes
+              &gt; About Us
             </p>
           </div>
         </div>
@@ -33,15 +33,23 @@ function AboutUs() {
         <div className="about-us-story">
           <h2>Our Story</h2>
           <p>
-            Rice N' Shine is an online project by a team of Filipino students who share a common interest in food, culture, and accessibility. 
-            The project aims to provide an accessible and systematic online site with recipes from all over the Philippines, including cultural background, simple steps, 
-            and variety of regions. The website seeks to cater to both novice and seasoned home cooks—be they Filipinos who want to get back to their roots, or non-Filipinos who want to
+            Rice N' Shine is an online project by a team of Filipino students
+            who share a common interest in food, culture, and accessibility. The
+            project aims to provide an accessible and systematic online site
+            with recipes from all over the Philippines, including cultural
+            background, simple steps, and variety of regions. The website seeks
+            to cater to both novice and seasoned home cooks—be they Filipinos
+            who want to get back to their roots, or non-Filipinos who want to
             discover the nation's food.
           </p>
           <p>
-            Our team chose to pursue this project because we saw an increasing disconnect between contemporary Filipino youth and traditional culinary culture. With recipes frequently 
-            shared orally within families, there is little centralized, consistent, and culturally sensitive information online. By constructing Rice N' Shine, we aim to make a contribution 
-            toward the preservation and sharing of Filipino food culture in an educational yet entertaining manner.
+            Our team chose to pursue this project because we saw an increasing
+            disconnect between contemporary Filipino youth and traditional
+            culinary culture. With recipes frequently shared orally within
+            families, there is little centralized, consistent, and culturally
+            sensitive information online. By constructing Rice N' Shine, we aim
+            to make a contribution toward the preservation and sharing of
+            Filipino food culture in an educational yet entertaining manner.
           </p>
         </div>
       </div>
@@ -91,8 +99,12 @@ function AboutUs() {
                 email: anceliorozco@su.edu.ph
               </div>
               <p>
-                This is Ancel Kimberly Orozco. She’s an IT Student at Silliman University’s College of Computer Studies. She learned how to cook some of the recipes from her family growing up. 
-                Today, she cooks these recipes for her family and friends that may live or travel all the way home to the Philippines and hopes to share these recipes and her culture  internationally in the future.
+                This is Ancel Kimberly Orozco. She’s an IT Student at Silliman
+                University’s College of Computer Studies. She learned how to
+                cook some of the recipes from her family growing up. Today, she
+                cooks these recipes for her family and friends that may live or
+                travel all the way home to the Philippines and hopes to share
+                these recipes and her culture internationally in the future.
               </p>
             </div>
           </div>
