@@ -126,9 +126,9 @@ function AboutUs() {
                 email: janminoferio@su.edu.ph
               </div>
               <p>
-                Non provident dolorum et iusto accusamus eos quisquam
-                accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui
-                tempore tempora aut harum quia?
+                Jan Carlos Inoferio is a student at Silliman University’s Bachelor of Science in Information Technology. 
+                While not a professionally trained chef, or even close, he developed a deep appreciation for Filipino cuisine, especially 
+                when someone else is doing the cooking.
               </p>
             </div>
           </div>
