@@ -33,29 +33,15 @@ function AboutUs() {
         <div className="about-us-story">
           <h2>Our Story</h2>
           <p>
-            Lorem ipsum dolor sit amet. Id omnis blanditiis et dolores porro non
-            assumenda illum in dignissimos corrupti sit architecto maiores! Ab
-            odit voluptatem eos consequatur velit et odit reiciendis aut magnam
-            optio eum magni maxime ut dolore incidunt. Ea autem magnam ut totam
-            molestias sit delectus quas eos nostrum ipsam. Et amet aspernatur
-            rem placeat totam est explicabo nihil qui voluptatem libero qui
-            optio omnis ea rerum corporis.
+            Rice N' Shine is an online project by a team of Filipino students who share a common interest in food, culture, and accessibility. 
+            The project aims to provide an accessible and systematic online site with recipes from all over the Philippines, including cultural background, simple steps, 
+            and variety of regions. The website seeks to cater to both novice and seasoned home cooks—be they Filipinos who want to get back to their roots, or non-Filipinos who want to
+            discover the nation's food.
           </p>
           <p>
-            Non provident dolorum et iusto accusamus eos quisquam accusantium
-            est eius Quis et ipsa odio? Nam quibusdam eaque qui tempore tempora
-            aut harum quia? Sed similique consectetur hic minus libero eum
-            explicabo consequatur sit quis perferendis. Et nulla impedit rem
-            velit dicta ea consequatur iste.
-          </p>
-          <p>
-            Ut atque itaque eos voluptatem quas ut velit reiciendis est
-            doloribus labore ut optio praesentium qui voluptatem galisum. Ut
-            quasi dolorem in unde consequatur qui praesentium consequatur eum
-            fugiat architecto ut reprehenderit eius sed rerum beatae sed unde
-            voluptas. Ad aspernatur cupiditate qui voluptates voluptates eum
-            esse aliquam. Ut sint molestiae a pariatur aliquam aut consectetur
-            quaerat quo officiis dolorem est minus harum.
+            Our team chose to pursue this project because we saw an increasing disconnect between contemporary Filipino youth and traditional culinary culture. With recipes frequently 
+            shared orally within families, there is little centralized, consistent, and culturally sensitive information online. By constructing Rice N' Shine, we aim to make a contribution 
+            toward the preservation and sharing of Filipino food culture in an educational yet entertaining manner.
           </p>
         </div>
       </div>
@@ -105,9 +91,8 @@ function AboutUs() {
                 email: anceliorozco@su.edu.ph
               </div>
               <p>
-                Non provident dolorum et iusto accusamus eos quisquam
-                accusantium est eius Quis et ipsa odio? Nam quibusdam eaque qui
-                tempore tempora aut harum quia?
+                This is Ancel Kimberly Orozco. She’s an IT Student at Silliman University’s College of Computer Studies. She learned how to cook some of the recipes from her family growing up. 
+                Today, she cooks these recipes for her family and friends that may live or travel all the way home to the Philippines and hopes to share these recipes and her culture  internationally in the future.
               </p>
             </div>
           </div>
