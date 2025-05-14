@@ -19,3 +19,26 @@
 .breadcrumbs-Link:hover {
   color: #fdbb11;
 }
+
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .breadcrumbs-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .breadcrumbs-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+

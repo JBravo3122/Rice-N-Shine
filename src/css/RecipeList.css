@@ -284,4 +284,65 @@
   }
 }
 
-
+@media (max-width: 1024px) and (min-width: 601px) {
+  .reclist-body {
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+  .reclist-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .reclist-tabButtons {
+    width: 100%;
+    justify-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .reclist-allButtons {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 0;
+  }
+  .reclist-button {
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 0;
+    text-align: center;
+    display: block;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1 1 0;
+  }
+  .reclist-searchBar input {
+    width: 100%;
+    font-size: 16px;
+    height: 36px;
+  }
+  .reclist-recipes {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 16px;
+    padding-bottom: 30px;
+    width: 100vw;
+    justify-items: center;
+  }
+  .recipe-card, .recipe-skelCard {
+    width: 95vw;
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .recipe-card img, .recipe-skelCard img {
+    height: 180px;
+  }
+}
