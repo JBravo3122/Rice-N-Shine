@@ -36,6 +36,9 @@ function SiteMap() {
               <Link to="/recipelist">Recipes</Link>
             </li>
             <li>
+              <Link to="/contactus">Contact Us</Link>
+            </li>
+            <li>
               <Link to="/faq">FAQs </Link>
             </li>
             <li>

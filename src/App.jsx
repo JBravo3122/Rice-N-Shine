@@ -9,6 +9,7 @@ import Homepage from "./Homepage.jsx";
 import Video from "./Homepagevideo.jsx";
 import About from "./AboutUs.jsx";
 import SiteMap from "./SiteMap.jsx";
+import ContactUs from "./ContactUs.jsx";
 import Footer from "./Footer.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/recipepage/:recipe_id" element={<RecipeTemplate />} />
         <Route path="/sitemap" element={<SiteMap />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
       <Footer />
     </>
