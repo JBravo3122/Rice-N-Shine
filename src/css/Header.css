@@ -189,9 +189,18 @@ body {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    scale:0.9;
+    padding: 0px 0px 5px 0px;
   }
 
   .desktopnav {
     display: none;
+  }
+
+  .sumanleft{
+    display: none;
+  }
+  .sumanright{
+    scale: 2;
   }
 }
