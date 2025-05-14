@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 2vw;
+    gap: 2%;
     position: relative;
   }
   
@@ -62,13 +62,14 @@
   .navlinks h2 {
     margin: 0;
     font-size: 0.9vw;
-    min-width: 50px;
+    min-width: 5%;
   }
   
   .navlinks a {
     text-decoration: none;
     color: #ffe0bd;
     font-weight: 400;
+    font-size: clamp(6px, 1vw, 15px);
     transition: color 0.3s ease-in-out;
   }
 
