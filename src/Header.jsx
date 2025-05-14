@@ -81,6 +81,7 @@ function Header() {
             { name: "Recipes", path: "/recipelist" },
             { name: "FAQs", path: "/faq" },
             { name: "Site Map", path: "/sitemap" },
+            { name: "Contact Us", path: "/contactus" }
           ].map((item) => (
             <p key={item.name}>
               <Link

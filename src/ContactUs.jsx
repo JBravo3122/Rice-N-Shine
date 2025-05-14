@@ -74,11 +74,11 @@ const ContactUs = () => {
                 value={platform}
                 onChange={(e) => setPlatform(e.target.value)}
                 className="contact-select"
-              >
+              > 
+                <option value="default">Default Email App</option>
                 <option value="gmail">Gmail</option>
                 <option value="outlook">Outlook</option>
                 <option value="yahoo">Yahoo Mail</option>
-                <option value="default">Default Email App</option>
               </select>
             </div>
 
@@ -116,6 +116,15 @@ const ContactUs = () => {
               SUBMIT
             </button>
           </form>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
         </div>
       </div>
     </>
