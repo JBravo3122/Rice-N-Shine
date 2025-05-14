@@ -287,7 +287,7 @@
 @media (max-width: 1024px) and (min-width: 601px) {
   .reclist-body {
     margin-top: 10px;
-    padding: 0 10px;
+    padding: 0 16px;
   }
   .reclist-title {
     font-size: 36px;
@@ -333,11 +333,12 @@
     row-gap: 30px;
     column-gap: 16px;
     padding-bottom: 30px;
-    width: 100vw;
+    width: 98vw;
+    max-width: 98vw;
     justify-items: center;
   }
   .recipe-card, .recipe-skelCard {
-    width: 95vw;
+    width: 45vw;
     max-width: 400px;
     margin: 0 auto;
     height: auto;
