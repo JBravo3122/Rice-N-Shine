@@ -43,7 +43,7 @@ const ContactUs = () => {
   return (
     <>
       <div className="contactUs-container">
-        <div className="breadcrumbs-container">
+        <div className="contactus-bread-container">
           <div className="breadcrumbs">
             <p>
               <Link to="/" className="breadcrumbs-Link">
