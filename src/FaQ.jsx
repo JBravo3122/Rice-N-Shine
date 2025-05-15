@@ -42,7 +42,7 @@ function FaQ() {
     {
       question: "Do you feature recipes from different cuisines?",
       answer:
-        "We focus on Filipino cuisine and proudly feature dishes from all over the Philippines, sorted by region to showcase the country’s rich and diverse culinary traditions.",
+        "We focus on Filipino cuisine and proudly feature dishes from all over the Philippines, sorted by region to showcase the country's rich and diverse culinary traditions.",
     },
     {
       question: "Can I share recipes on social media?",
@@ -59,7 +59,7 @@ function FaQ() {
   return (
     <>
       <div className="faq-container">
-        <div className="breadcrumbs-container">
+        <div className="breadcrumbs-container" style={{ marginLeft: '26px', marginTop: '-20px' }}>
           <div className="breadcrumbs">
             <p>
               <Link to="/" className="breadcrumbs-Link">
