@@ -175,6 +175,7 @@ body {
   color: #4f1212;
   font-weight: 600;
   transition: background 0.2s ease-in-out;
+  line-height:2.5;
 }
 
 .sidebar a:hover {
